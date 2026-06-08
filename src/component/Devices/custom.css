@@ -1,0 +1,9 @@
+.custom-grid {
+    overflow: auto !important; /* Allows scrolling */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+  }
+  
+  .custom-grid::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari */
+  }
+  

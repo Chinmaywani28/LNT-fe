@@ -1,0 +1,2263 @@
+{
+    "Site": {
+        "Name": "L & T",
+        "Facilities": [
+            {
+                "Name": "Basement (B1)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Ramp Down Ground F to B-1",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                           
+                        ]
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B1 to B-2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B1 to Ground Flr",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B2 to B1",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B1 to B-2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down Ground flr to B-1",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down Ground flr to B-1",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B1 to B-2",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B1 to Ground Flr",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B2 to B1",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B1 to B-2",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down Ground flr to B-1",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Centre",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Front",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },  
+                    {
+                        "Floor_Number": "Staircase Back",
+                        "Location": [
+                           {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Basement (B2)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Ramp Down B1 to B2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                           
+                        ]
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B2 to B1",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B3 to B2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B1 to B2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B1 to B2",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B2 to B1",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B3 to B2",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B1 to B2",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Centre",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Front",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },  
+                    {
+                        "Floor_Number": "Staircase Back",
+                        "Location": [
+                           {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Basement (B3)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                           
+                        ]
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B3 to B2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B3 to B2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B3 to B2",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Up B3 to B2",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Ramp Down B2 to B3",
+                        "Location": [
+                            {
+                                "Name": "NO2 Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Centre",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Front",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },  
+                    {
+                        "Floor_Number": "Staircase Back",
+                        "Location": [
+                           {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Name": "Ground Floor (G0)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Centre",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Front",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },  
+                    {
+                        "Floor_Number": "Staircase Back",
+                        "Location": [
+                           {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    
+                    {
+                        "Floor_Number": "Main Kitchen Area",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "Gas leak detectors"
+                            }
+                        ]
+
+                    },{
+                        "Floor_Number": "AHU Room",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Battery",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Dish Wash Area",
+                        "Location": [
+                           {
+                                "Name": "Gas leak detectors"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Fan Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "IDF",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "ISP",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Main LT Panel Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Server",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "First Floor (F1)",
+                "Floors": [
+                     {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Main Kitchen Area",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            },
+                             {
+                                "Name": "Gas leak detectors"
+                            }
+                        ]
+
+                    }, 
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 5",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Dining Area",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Dry Storage",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Kitchen Store and Office",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "Gas leak detectors"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Pantry",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Store",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Dish Wash Area",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Second floor(F2)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "BIM Seminar Hall Left",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "BIM Seminar Hall Right",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "BIM Seminar Hall 2 Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "BIM Seminar Hall 2 Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Breakout Space 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Breakout Space 2",
+                        "Location": [
+                             {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Experience Centre",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "Illumination Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Meeting Room 1 right",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Meeting Room 2 middle",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Meeting Room 3 left",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Meeting Room Near Seminar Hall",
+                        "Location": [
+                           {
+                                "Name": "Illumination sensor"
+                            },
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1 left",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2 right",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Third Floor (F3)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Staircase Right ",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Conference Room near Projector Room",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Conference Room near Seminar hall",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                      {
+                        "Floor_Number": "Discussion Room 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Discussion Room 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Digital Exp Centre",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Seminar hall 1",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Seminar hall 2",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Seminar hall 3",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Seminar hall 4",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                   
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "AHU Room 1 left",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2 left",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3 right",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 4 right",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "40-seater dining hall",
+                        "Location": [
+                           {
+                                "Name": "CO2 VOC"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Projector Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+             {
+                "Name": "Fourth Floor (F4)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+             {
+                "Name": "Fifth Floor (F5)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Sixth Floor (F6)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Seventh Floor (F7)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Eighth Floor (F8)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Ninth Floor (F9)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+             {
+                "Name": "Tenth Floor (F10)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Eleventh Floor (F11)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Twelveth Floor (F12)",
+                "Floors": [
+                    {
+                        "Floor_Number": "Staircase Left",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Middle",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Staircase Right",
+                        "Location": [
+                            {
+                                "Name": "Illumination sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 1",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry 2",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room 1",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 2",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 3",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "AHU Room 4",
+                        "Location": [
+                           {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                     {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                           {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                     {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                        ]
+
+                    }
+                ]
+            },
+            {
+                "Name": "Thirteenth Floor (F13)",
+                "Floors": [
+                     {
+                        "Floor_Number": "Lobby",
+                        "Location": [
+                            {
+                                "Name": "Illumination Sensor"
+                            },
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Corridor",
+                        "Location": [
+                            {
+                                "Name": "Illumination Sensor"
+                            },
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Lift Lobby",
+                        "Location": [
+                            {
+                                "Name": "Illumination Sensor"
+                            },
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Pantry",
+                        "Location": [
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                            
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Electrical Room",
+                        "Location": [
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "AHU Room",
+                        "Location": [
+                            {
+                                "Name": "Noise Detection"
+                            }
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "Printer Room",
+                        "Location": [
+                            {
+                                "Name": "Ozone"
+                            }
+                            
+                        ]
+
+                    },
+                    {
+                        "Floor_Number": "IDF Room",
+                        "Location": [
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                    {
+                        "Floor_Number": "Corporate Area Rooms",
+                        "Location": [
+                            {
+                                "Name": "CO2 VOC"
+                            },
+                            {
+                                "Name": "Temperature & Humidity Sensor"
+                            }
+                        ]
+
+                    },
+                    
+                    
+                    {
+                        "Floor_Number": "Gas Leak detectors",
+                        "Location": [
+                            {
+                                "Name": "Gas leak detectors"
+                            }
+                            
+                        ]
+
+                    }
+                    
+                ]
+            }
+        ]
+    }
+}
+   
