@@ -103,7 +103,7 @@ function Home({ Monthlydata_Gen, Monthlydata_Consume, floor1, floor2, floor3 }) 
           <Navbar openDrawer={open} handleOpen={handleOpen} selectedMenuItem={selectedMenuItem} component={component} toggleBoxVisibility={toggleBoxVisibility} isBoxVisible={isBoxVisible} floorKey={floorKey} />
           <Routes>
             <Route path="/" element={<HomePageSYD />} />
-            <Route path="componentOne" element={<ComponentOne componentMap={component} isBoxVisible={isBoxVisible} toggleBoxVisibility={toggleBoxVisibility} floorKey={floorKey} imageKey={imageKey} />} />
+            <Route path="componentOne" element={<ComponentOne componentMap={component} isBoxVisible={isBoxVisible} toggleBoxVisibility={toggleBoxVisibility} floorKey={floorKey} imageKey={imageKey} openSidebar={open} />} />
           </Routes>
         </Box>
       </Box>

@@ -22,7 +22,7 @@ const ComponentOne = ({
   isBoxVisible,
   toggleBoxVisibility,
   floorKey,
-  imageKey,
+  imageKey,openSidebar
 }) => {
   const [graphConfig, setGraphConfig] = useState([]);
   const [resultantObj, setresultantObj] = useState([]);
@@ -574,6 +574,7 @@ const ComponentOne = ({
         transform={isBoxVisible ? "translateY(0)" : "translateY(-100%)"}
       >
         {resultantObj?.map((data, index) => {
+          console.log('adsfdfa',data)
           const chartConfig = chartsObj?.find(
             (chart) => chart.chartId === data.chart_type
           );
@@ -615,14 +616,15 @@ const ComponentOne = ({
                     removeGadget={handleRemoveGadget}
                     index={data?.key}
                     compData={data}
+                    openSidebar={openSidebar}
                   />
                 </Grid>
 
-
+                    
               );
             } else {
               return (
-
+                
                 <Grid item key={data?.graph_id}>
 
                   <CardComponent
@@ -649,6 +651,7 @@ const ComponentOne = ({
                     removeGadget={handleRemoveGadget}
                     index={data?.key}
                     compData={data}
+                    openSidebar={openSidebar}
                   />
 
                 </Grid>

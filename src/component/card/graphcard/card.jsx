@@ -4,7 +4,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useBarContext } from "../../context/barcontext";
 import "../../css/cardbg.css";
 
-const CardComponent = ({ Data, chartData, chartTitle, chartConfig, chartHeight, chartWidth, removeGadget, index, compData }) => {
+const CardComponent = ({ Data, chartData, chartTitle, chartConfig, chartHeight, chartWidth, removeGadget, index, compData,openSidebar }) => {
   const { barData } = useBarContext();
 
   const handleRemove = () => {
@@ -19,6 +19,9 @@ const CardComponent = ({ Data, chartData, chartTitle, chartConfig, chartHeight, 
       backgroundColor: "rgba(255, 255, 255, 0.68)",
     },
   };
+
+  // console.log(openSidebar,'open');
+  
 
   let renderedChart = null;
   try {
@@ -38,6 +41,7 @@ const CardComponent = ({ Data, chartData, chartTitle, chartConfig, chartHeight, 
         yAxis: 'Energy (kWh)',
         chartHeight,
         chartWidth,
+        openSidebar
       });
     }
   } catch (error) {

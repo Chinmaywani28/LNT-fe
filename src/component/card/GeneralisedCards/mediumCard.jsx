@@ -12,9 +12,7 @@ import GaugeChart from './gauge';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
-const MediumCard = ({ Data, chartData }) => {
-
-  console.log('adsfadsf',Data)
+const MediumCard = ({ Data, chartData,openSidebar }) => {
 
   const chartRef = useRef(null);
 
@@ -113,8 +111,15 @@ const MediumCard = ({ Data, chartData }) => {
     }
   };
 
-  // const labelsData = Data?.timestamp?.map(item => item.split(", ")[1]).splice(1) ?? [];
-  const labelsData = Data?.timestamp?.slice(1) ?? [];
+const labelsData =
+  Data?.timestamp
+    ?.map(item =>
+      typeof item === "string"
+        ? item.split(", ")[1]
+        : ""
+    )
+    ?.slice(1) ?? [];
+  // const labelsData = Data?.timestamp?.slice(1) ?? [];
 
   const dataValuesData = Data?.meter_reading ? convertDataValues(Data?.meter_reading.slice(1), power) : [];
   const convertedMinPower = minValue ? convertPower(minValue, power) : null;
@@ -166,9 +171,15 @@ const MediumCard = ({ Data, chartData }) => {
       {
         label: `${Data?.gadget_name} (${power})`,
         data: chartData?.data || '',
-        // borderColor: getBorderColor(chartData?.data),
-        borderColor: (context) => getBorderColor(context),
+        //// borderColor: getBorderColor(chartData?.data),
+
+
+        // borderColor: (context) => getBorderColor(context),
+        // backgroundColor: (context) => getBorderColor(context),
+        borderColor: '#006DBC',
         backgroundColor: (context) => getBorderColor(context),
+
+
         //  chartData ? (context) => {
         //   const chart = context.chart;
         //   const { ctx, chartArea } = chart;
@@ -318,7 +329,6 @@ const MediumCard = ({ Data, chartData }) => {
   }
 
   const getColorSettings = (value) => {
-    console.log('valuuu::',value,minValue, maxValue )
     try {
       if (!value) {
         return {
@@ -480,7 +490,7 @@ const MediumCard = ({ Data, chartData }) => {
           text: `${Data?.gadget_name} (${power})`,
           font: {
             weight: 'bold',
-            color: '#9e9e9e',
+            color: '#006DBC',
           },
         },
         display: true,
@@ -491,7 +501,7 @@ const MediumCard = ({ Data, chartData }) => {
           font: {
             size: 10,
             weight: 'bold',
-            color: '#9e9e9e',
+            color: '#006DBC',
           },
         },
       },
@@ -683,11 +693,12 @@ const MediumCard = ({ Data, chartData }) => {
     getCriticalValues(Data?.gadget_type)
   }, [Data]);
 
-  console.log(Data);
+  // console.log(Data,openSidebar,'op');
 
 
   return (
-    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 920, height: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
+    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 610, height: '240px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 3, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
+{/* bgcolor: '#C7E7FF', */}
 
       <Box ref={ref} sx={{ color: tempCheck?.fontColor, position: 'relative', bottom: 10 }}>
         <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
@@ -698,7 +709,8 @@ const MediumCard = ({ Data, chartData }) => {
               whiteSpace: 'nowrap',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
-              fontSize: 18
+              fontSize: 18,
+              paddingLeft: '12px', // Move text slightly right
             }}
           >
             {Data?.meter_name?.toUpperCase() || 'N/A'}
@@ -722,12 +734,17 @@ const MediumCard = ({ Data, chartData }) => {
           overflow: 'hidden',
           textOverflow: 'ellipsis', width: (Data?.gadget_type === 'intermidiateCO2' || Data?.gadget_type === 'intermidiateCO') ? 205 : null
         }}>
+          
           {Data?.gadget_name?.toUpperCase()}
         </Typography>
       </Box>
-      <Box sx={{ display: 'flex', justifyContent: Data?.gadget_type === 'intermidiateValve' ? 'center' : 'space-evenly', alignItems: 'center', position: 'relative', bottom: Data?.gadget_type === 'intermidiateValve' ? 85 : 44, gap: 2 }}>
+
+
+      <Box sx={{ display: 'flex', justifyContent: Data?.gadget_type === 'intermidiateValve' ? 'center' : 'space-evenly', alignItems: 'center', position: 'relative', bottom: Data?.gadget_type === 'intermidiateValve' ? 85 : 44, gap: 1 }}>
+
+
         <Box sx={{
-          display: 'flex', flexDirection: 'column', gap: Data?.meter_reading?.length ? 3 : 0, position: 'relative', top: 35, left: Data?.gadget_type === 'intermidiateValve' ? 60 : 0
+          display: 'flex', flexDirection: 'column', gap: Data?.meter_reading?.length ? 3 : 0, position: 'relative', top: 37, left: Data?.gadget_type === 'intermidiateValve' ? 60 : 0
         }}>
           {Data?.meter_reading?.length ?
             <Box>
@@ -737,14 +754,14 @@ const MediumCard = ({ Data, chartData }) => {
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
               }}>
-                <Typography sx={{ textAlign: 'center', fontSize: 45, fontWeight: 'bold', }}>{numericValue}</Typography>
-                <Typography sx={{ textAlign: 'center', fontSize: 30, fontWeight: 'bold', marginTop: 2 }}>{textValue}</Typography>
+                <Typography sx={{ textAlign: 'center', fontSize: 36, fontWeight: 'bold', }}>{numericValue}</Typography>
+                <Typography sx={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 }}>{textValue}</Typography>
                 <sup style={{ position: 'relative', bottom: 25, }}>
                   <FormControl sx={{ color: tempCheck?.colors }} size="small" variant="outlined">
                     <Box onClick={handleClick} size='small' sx={{
                       cursor: 'pointer', height: 35, marginTop: '30px',
                     }}>
-                      <sup style={{ fontSize: 18, verticalAlign: 'top', color: tempCheck?.colors, }}>{power}</sup>
+                      <sup style={{ fontSize: 14, verticalAlign: 'top', color: tempCheck?.colors, }}>{power}</sup>
                     </Box>
                     <Menu id="temperature-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
                       {(() => {
@@ -821,23 +838,27 @@ const MediumCard = ({ Data, chartData }) => {
                   </FormControl>
                 </sup>
               </Box>
-              <Typography sx={{ fontWeight: 'bold' }}>
+              <Typography sx={{ fontWeight: 'bold',fontSize : 14 }}>
                 {Data?.timestamp?.length
                   ? Data.timestamp[Data.timestamp.length - 1]
                   : ""}
               </Typography>
             </Box>
+
+            
             : (
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: tempCheck?.colors, position: 'relative', bottom: 5 }}>
                 <Typography sx={{ textAlign: 'left' }} width={60} height={60} fontSize={45} fontWeight={'bold'}>OFF</Typography>
               </Box>
             )}
         </Box>
+
+
         <Box sx={{ position: 'relative', left: Data?.gadget_type === 'intermidiateValve' ? 60 : 0 }}>
           {(Data?.gadget_type === 'intermidiateEnergy' && Data?.range !== 'live') ? (
-            <Bar data={dataBar} options={optionsBar} width={600} height={185} />
+            <Bar data={dataBar} options={optionsBar} width={300} height={185} />
           ) : (
-            <Line data={data} options={options} width={600} height={185} />
+            <Line data={data} options={options} width={375} height={185} />
           )}
         </Box>
       </Box>
