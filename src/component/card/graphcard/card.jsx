@@ -30,6 +30,7 @@ const CardComponent = ({ Data, chartData, chartTitle, chartConfig, chartHeight, 
         Data: Object.assign(Data[0], {
           meter_name: chartTitle
         }),
+        openSidebar
       });
     }
     else if (chartData) {
