@@ -190,7 +190,8 @@ const labelsData =
         // } : '',
         // fill: true,
         tension: 0.4,
-        borderWidth: 4,
+        // borderWidth: 4,
+        borderWidth: 3,
         pointRadius: 0,
         pointHoverRadius: 0,
       },
@@ -697,7 +698,7 @@ const labelsData =
 
 
   return (
-    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 610, height: '240px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 3, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
+    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 510, height: '240px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 2, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
 {/* bgcolor: '#C7E7FF', */}
 
       <Box ref={ref} sx={{ color: tempCheck?.fontColor, position: 'relative', bottom: 10 }}>
@@ -710,7 +711,9 @@ const labelsData =
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               fontSize: 18,
-              paddingLeft: '12px', // Move text slightly right
+              paddingLeft: '12px', // Move text slightly right,
+              position: 'relative',
+    top: '20px'
             }}
           >
             {Data?.meter_name?.toUpperCase() || 'N/A'}
@@ -729,6 +732,7 @@ const labelsData =
         })}
 
         <Typography variant='h6' fontWeight='bold' sx={{
+          fontSize: '14px',
           textAlign: 'left',
           whiteSpace: 'nowrap',
           overflow: 'hidden',
@@ -848,7 +852,8 @@ const labelsData =
             
             : (
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: tempCheck?.colors, position: 'relative', bottom: 5 }}>
-                <Typography sx={{ textAlign: 'left' }} width={60} height={60} fontSize={45} fontWeight={'bold'}>OFF</Typography>
+                <Typography sx={{ textAlign: 'center' }} width={60} height={60} fontSize={30} fontWeight={'bold'}>OFF</Typography>
+                {/* textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 */}
               </Box>
             )}
         </Box>

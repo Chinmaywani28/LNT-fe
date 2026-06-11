@@ -12,6 +12,7 @@ import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 const SmallCard = ({ Data }) => {
+  console.log('datajlj', Data)
   
   const getConversion = (type) => {
     switch (type) { 
@@ -614,7 +615,8 @@ const SmallCard = ({ Data }) => {
     //   </Box>
     // </Card>
     // );
-    <Card sx={{ ...styles.thinBorder, width: 300, height: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: tempCheck.bgColor, borderColor: tempCheck.borderColor, borderWidth: 2 }}>
+    <Card sx={{ ...styles.thinBorder, width: 250, height: '240px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck.borderColor, borderWidth: 2 }}>
+
      <Box ref={ref} sx={{ color: tempCheck.fontColor,  }}>
         <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
           <Typography
@@ -624,13 +626,15 @@ const SmallCard = ({ Data }) => {
               whiteSpace: 'nowrap',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
-              fontSize : 18
+              fontSize : 16
             }}
           >
             {Data?.meter_name?.toUpperCase() || 'N/A'}
           </Typography>
         </ToolTipBox>
       </Box>
+
+
      <Box sx={{ display: 'flex',justifyContent : 'center', flexDirection: 'column', gap: 2.5, }}>
         <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', color: tempCheck.colors, position: 'relative', left: 0, gap: 1 }}>
           {getIcon(Data?.gadget_type)?.render({ width: 32, height: 32, color: tempCheck.colors, })}
@@ -695,11 +699,17 @@ const SmallCard = ({ Data }) => {
                 </FormControl>
               </sup>
             </Box>
-            <Typography sx={{textAlign: 'center', fontWeight : 'bold'}} >
-                     {Data?.timestamp?.length
+            <Box sx={{
+            position: 'relative',
+            top: '10px'
+            }}>
+                    <Typography sx={{textAlign: 'center', fontWeight : 'bold'}} >
+                     {Data?.timestamp?.length 
                       ? Data.timestamp[Data.timestamp.length - 1]
                       : ""}
                     </Typography>
+            </Box>
+            
           </Box>
           : (
             <Box sx={{ display: 'flex', color: tempCheck.colors, justifyContent : 'center'  }}>
