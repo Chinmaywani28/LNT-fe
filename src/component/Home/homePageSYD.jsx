@@ -22,7 +22,7 @@ const HomePage = () => {
                 <MediumWhetherCard
                     City={'chennai'}
                 />
-                <MediumAirCard Data={{ meter_name: 'Air Quality Index', location: 'LNT Chennai', }}
+                <MediumAirCard Data={{ meter_name: 'Air Quality Index', location: 'L&T Chennai', }}
                     lat={13.022851} lon={80.178165}
                 />
             </Box>

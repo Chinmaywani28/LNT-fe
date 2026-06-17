@@ -154,7 +154,7 @@ function AllGateways({
                   {site ? filterGateway?.length : allGateways?.length}{" "}
                   Gateway
                 </Typography>
-                <Button
+                {/* <Button
                   variant="contained"
                   sx={{
                     height: "70%",
@@ -164,7 +164,7 @@ function AllGateways({
                   onClick={handleClick}
                 >
                   Filter
-                </Button>
+                </Button> */}
                 <Menu
                   anchorEl={anchorEl}
                   open={open}

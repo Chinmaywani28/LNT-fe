@@ -5,7 +5,6 @@
             {
                 "Name": "Basement (B1)",
                 "Floors": [
-                    
                     {
                         "Floor_Number": "Ramp Down Ground F to B-1",
                         "Location": [
@@ -1266,13 +1265,6 @@
             {
                 "Name": "Sixth Floor (F6)",
                 "Floors": [
-                    {
-                        "Floor_Number" : "Sixth Floor Overview",
-                        "Location" : [
-                           { "Name": "Sixth Floor Overview"}
-                        ]
-                        
-                    },
                     {
                         "Floor_Number": "Staircase Left",
                         "Location": [

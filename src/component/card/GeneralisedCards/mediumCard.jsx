@@ -333,7 +333,7 @@ const labelsData =
     try {
       if (!value) {
         return {
-          bgColor: '#E5EBEB',
+          bgColor: '#ECF5FF',
           borderColor: '#E5EBEB',
           colors: '#757676',
           fontColor: 'black',
@@ -342,7 +342,7 @@ const labelsData =
 
       if ((!minValue || !maxValue)) {
         return {
-          bgColor: '#E9EEEF',
+          bgColor: '#ECF5FF',
           borderColor: '#E9EEEF',
           colors: '#006DBC',
           fontColor: 'black',
@@ -352,7 +352,7 @@ const labelsData =
       if (value > minValue && value < maxValue) {
 
         return {
-          bgColor: '#E9EEEF',
+          bgColor: '#ECF5FF',
           borderColor: '#E9EEEF',
           colors: '#006DBC',
           fontColor: 'black',
@@ -473,7 +473,7 @@ const labelsData =
             color: '#ff0000',
           },
         },
-        offset: true,
+        offset: false,
         grid: {
           display: false,
         },
@@ -698,7 +698,7 @@ const labelsData =
 
 
   return (
-    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 510, height: '240px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 2, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
+    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 600, height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 0, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
 {/* bgcolor: '#C7E7FF', */}
 
       <Box ref={ref} sx={{ color: tempCheck?.fontColor, position: 'relative', bottom: 10 }}>
@@ -711,7 +711,7 @@ const labelsData =
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               fontSize: 18,
-              paddingLeft: '12px', // Move text slightly right,
+              paddingLeft: '18px', // Move text slightly right,
               position: 'relative',
     top: '20px'
             }}
@@ -722,7 +722,7 @@ const labelsData =
       </Box>
 
 
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', color: tempCheck?.colors, gap: 1, position: 'relative', top: 30 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', color: tempCheck?.colors, gap: 1, position: 'relative', top: 30, left: 15 }}>
         {/* {getIcon(Data?.gadget_type)?.render({ width: 32, height: 32, color: tempCheck?.colors, textAlign: 'left' })} */}
         {getIcon(Data?.gadget_type)?.render({
           width: 32,
@@ -732,7 +732,7 @@ const labelsData =
         })}
 
         <Typography variant='h6' fontWeight='bold' sx={{
-          fontSize: '14px',
+          fontSize: '16px',
           textAlign: 'left',
           whiteSpace: 'nowrap',
           overflow: 'hidden',
@@ -744,7 +744,7 @@ const labelsData =
       </Box>
 
 
-      <Box sx={{ display: 'flex', justifyContent: Data?.gadget_type === 'intermidiateValve' ? 'center' : 'space-evenly', alignItems: 'center', position: 'relative', bottom: Data?.gadget_type === 'intermidiateValve' ? 85 : 44, gap: 1 }}>
+      <Box sx={{ display: 'flex', justifyContent: Data?.gadget_type === 'intermidiateValve' ? 'center' : 'space-evenly', alignItems: 'center', position: 'relative', bottom: Data?.gadget_type === 'intermidiateValve' ? 85 : 44, gap: 0, left: 15 }}>
 
 
         <Box sx={{
@@ -758,7 +758,7 @@ const labelsData =
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
               }}>
-                <Typography sx={{ textAlign: 'center', fontSize: 36, fontWeight: 'bold', }}>{numericValue}</Typography>
+                <Typography sx={{ textAlign: 'center', fontSize: 40, fontWeight: 'bold', }}>{numericValue}</Typography>
                 <Typography sx={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 }}>{textValue}</Typography>
                 <sup style={{ position: 'relative', bottom: 25, }}>
                   <FormControl sx={{ color: tempCheck?.colors }} size="small" variant="outlined">
@@ -843,16 +843,28 @@ const labelsData =
                 </sup>
               </Box>
               <Typography sx={{ fontWeight: 'bold',fontSize : 14 }}>
-                {Data?.timestamp?.length
+                {/* {Data?.timestamp?.length
                   ? Data.timestamp[Data.timestamp.length - 1]
-                  : ""}
+                  : ""} */}
+
+
+            {Data?.timestamp?.length
+            ? (() => {
+                const [datePart, timePart] =
+                  Data.timestamp[Data.timestamp.length - 1].split(", ");
+
+                const [month, day, year] = datePart.split("/");
+
+                return `${day}/${month}/20${year}, ${timePart}`;
+              })()
+            : ""}
               </Typography>
             </Box>
 
             
             : (
               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: tempCheck?.colors, position: 'relative', bottom: 5 }}>
-                <Typography sx={{ textAlign: 'center' }} width={60} height={60} fontSize={30} fontWeight={'bold'}>OFF</Typography>
+                <Typography sx={{ textAlign: 'center' }} width={80} height={60} fontSize={30} fontWeight={'bold'}>OFF</Typography>
                 {/* textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 */}
               </Box>
             )}

@@ -83,7 +83,7 @@ function AllNodes({ allNodes, fetchSingleNode, errorMessage, sydNodes, kokoNodes
                 >
                   Total {site ? filterNode?.length : allNodes?.length} Nodes
                 </Typography>
-                <Button
+                {/* <Button
                   variant="contained"
                   sx={{
                     height: "70%",
@@ -93,7 +93,7 @@ function AllNodes({ allNodes, fetchSingleNode, errorMessage, sydNodes, kokoNodes
                   onClick={handleClick}
                 >
                   Filter
-                </Button>
+                </Button> */}
                 <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
                   {["All", "TC-4", "TC-5"].map((label) => (
                     <MenuItem key={label} onClick={() => setSite(label)}>{label}</MenuItem>

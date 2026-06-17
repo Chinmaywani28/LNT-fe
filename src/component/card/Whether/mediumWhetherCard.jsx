@@ -137,7 +137,10 @@ const MediumWhetherCard = ({ City }) => {
                             <Divider orientation='vertical' flexItem sx={{ borderColor: tempCheck.colors, borderWidth: '0.5px' }} />
                             <Box sx={{ display: 'flex' }}><ArrowDownIcon /><Typography sx={{ textAlign: 'center', fontWeight: 'bold', fontSize: '18px' }}>{weatherData.main.temp_min}<sup style={{ fontSize: '12px', verticalAlign: 'top' }}>°C</sup></Typography></Box>
                         </Box> */}
-                        <Typography sx={{ textAlign: 'center', fontWeight: 'bold', }}>{weatherData.weather[0].description}</Typography>
+                        <Typography sx={{ textAlign: 'center', fontWeight: 'bold', }}>{weatherData.weather[0].description
+  .split(' ')
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ')}</Typography>
                     </Box> : <Typography sx={{ textAlign: 'center', fontWeight: 'bold', letterSpacing: 3, fontSize: '25px' }}>------</Typography>}
                 </Box>
                 <Box sx={{

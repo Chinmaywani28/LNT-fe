@@ -555,7 +555,7 @@ const ComponentOne = ({
         flexDirection: "column",
         justifyContent: "center",
         alignContent: "center",
-        py : 2
+        py : 2,
       }}
     >
       <Box sx={styles.slidingBox}>

@@ -615,7 +615,7 @@ const SmallCard = ({ Data }) => {
     //   </Box>
     // </Card>
     // );
-    <Card sx={{ ...styles.thinBorder, width: 250, height: '240px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck.borderColor, borderWidth: 2 }}>
+    <Card sx={{ ...styles.thinBorder, width: 295, height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck.borderColor, borderWidth: 2 }}>
 
      <Box ref={ref} sx={{ color: tempCheck.fontColor,  }}>
         <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
