@@ -9,10 +9,142 @@ import { iconsCon } from "../../config/iconsConfig";
 import * as echarts from "echarts";
 import LineChart from './lineChart';
 import GaugeChart from './gauge';
+import './mediumCard.css';
+import { GADGET_COLORS } from '../../data/gadgetColors';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
 const MediumCard = ({ Data, chartData,openSidebar }) => {
+
+  console.log('datata', Data)
+  // third card data
+  const ahuData = {
+  name: "AHU-1 · 10F",
+  device: "Device 1 · obj inst 1320-1349",
+  status: "Running",
+  mode: "Auto",
+  time: "11:42:08",
+
+  metrics: [
+    {
+      label: "Supply Air",
+      value: 14.2,
+      unit: "°C"
+    },
+    {
+      label: "Return Air",
+      value: 22.8,
+      unit: "°C",
+      subText: "SP 23.0°C"
+    },
+    {
+      label: "CO₂",
+      value: 512,
+      unit: "ppm"
+    },
+    {
+      label: "Humidity",
+      value: 54,
+      unit: "%"
+    }
+  ],
+
+  airSide: [
+    { label: "Fan Status", value: "ON" },
+    { label: "Fan Speed", value: "72 %" },
+    { label: "Fan Power", value: "4.8 kW" },
+    { label: "Airflow", value: "3,420 CFM" },
+    { label: "Duct ΔP", value: "245 Pa (SP 250)" },
+    { label: "EC Fans 1-2-3", value: "● ● ●" }
+  ],
+
+  waterSide: [
+    { label: "CHW Inlet", value: "8.2 °C" },
+    { label: "CHW Outlet", value: "13.6 °C" },
+    { label: "ΔT (coil)", value: "5.4 K" },
+    { label: "PICV cmd", value: "65 %" },
+    { label: "PICV feedback", value: "64 %" },
+    { label: "ADPT", value: "12.1 °C" }
+  ],
+
+  safety: [
+    "Filter",
+    "Fire",
+    "E-stop",
+    "Door",
+    "Damper",
+    "Comm"
+  ]
+};
+
+  // second card data
+  const gases = [
+  {
+    label: "PM2.5",
+    value: 12,
+    unit: "μg/m³",
+    status: "good",
+  },
+  {
+    label: "PM10",
+    value: 28,
+    unit: "μg/m³",
+    status: "good",
+  },
+  {
+    label: "CO₂",
+    value: 912,
+    unit: "ppm",
+    status: "moderate",
+  },
+  {
+    label: "TVOC",
+    value: 340,
+    unit: "μg/m³",
+    status: "good",
+  },
+  {
+    label: "CO",
+    value: 0.4,
+    unit: "ppm",
+    status: "good",
+  },
+  {
+    label: "NO₂",
+    value: 22,
+    unit: "μg/m³",
+    status: "good",
+  },
+  {
+    label: "SO₂",
+    value: 9,
+    unit: "μg/m³",
+    status: "good",
+  },
+  {
+    label: "O₃",
+    value: 48,
+    unit: "μg/m³",
+    status: "good",
+  },
+];
+
+const environment = [
+  {
+    label: "Temperature",
+    value: 24.2,
+    unit: "°C",
+    status: "good",
+  },
+  {
+    label: "Humidity",
+    value: 52,
+    unit: "%",
+    status: "good",
+  },
+];
+
+  console.log('DataData::', Data);
 
   const chartRef = useRef(null);
 
@@ -125,6 +257,8 @@ const labelsData =
   const convertedMinPower = minValue ? convertPower(minValue, power) : null;
   const convertedMaxPower = maxValue ? convertPower(maxValue, power) : null;
   const convertedCriticalPower = criticalValue ? convertPower(criticalValue, power) : null;
+  // colors Configs
+  const gadgetConfig = GADGET_COLORS[Data.gadget_name];
 
   const getBorderColor = (context) => {
     try {
@@ -176,7 +310,12 @@ const labelsData =
 
         // borderColor: (context) => getBorderColor(context),
         // backgroundColor: (context) => getBorderColor(context),
-        borderColor: '#006DBC',
+        // borderColor: '#006DBC',
+
+
+        // added for chart color(line chart)
+        borderColor: gadgetConfig?.color || "#006DBC",
+
         backgroundColor: (context) => getBorderColor(context),
 
 
@@ -329,27 +468,48 @@ const labelsData =
     }
   }
 
+
+  // const getCardBgColor = (gadget_name) => {
+  //   if (gadget_name === "Lux") {
+  //     return '#8f1010';
+  //   }
+
+      
+  // }
+
+  
+
+    
+      
+
+
   const getColorSettings = (value) => {
+    // console.log('valuevalue::',value, minValue, maxValue, criticalValue);
     try {
       if (!value) {
+        // console.log('!value')
         return {
-          bgColor: '#ECF5FF',
+          // bgColor: '#ECF5FF',
+          bgColor: gadgetConfig?.bg || "#FFFFFF",
           borderColor: '#E5EBEB',
-          colors: '#757676',
+          // colors: '#757676',
+          colors: gadgetConfig?.color || "#006DBC",
           fontColor: 'black',
         }
       }
 
       if ((!minValue || !maxValue)) {
+        // console.log('!minValue || !maxValue')
         return {
-          bgColor: '#ECF5FF',
+          bgColor: gadgetConfig?.bg || "#FFFFFF",
           borderColor: '#E9EEEF',
-          colors: '#006DBC',
+          colors: gadgetConfig?.color || "#006DBC",
           fontColor: 'black',
         }
       }
 
       if (value > minValue && value < maxValue) {
+        // console.log('value > minValue && value < maxValue')
 
         return {
           bgColor: '#ECF5FF',
@@ -358,6 +518,7 @@ const labelsData =
           fontColor: 'black',
         };
       } else if (value >= maxValue && value < criticalValue) {
+        // console.log('value >= maxValue && value < criticalValue')
 
         return {
           bgColor: '#FFF0D9',
@@ -366,6 +527,8 @@ const labelsData =
           fontColor: '#FF6B00',
         };
       } else if (value >= criticalValue || value <= minValue) {
+        console.log('value >= criticalValue || value <= minValue')
+
         return {
           bgColor: '#FFD9D9',
           borderColor: '#FF0E0E',
@@ -464,7 +627,12 @@ const labelsData =
     },
     scales: {
       x: {
+        // x axis color
+        border: {
+          color: '#374151', // X-axis line color
+        },
         title: {
+          color: '#374151', // Label color
           display: false,
           text: `Time Period`,
           font: {
@@ -478,6 +646,7 @@ const labelsData =
           display: false,
         },
         ticks: {
+           color: '#374151',
           font: {
             size: 10,
             weight: 'bold',
@@ -486,7 +655,12 @@ const labelsData =
         },
       },
       y: {
+        // Y axis color
+        border: {
+          color: '#374151', // X-axis line color
+        },
         title: {
+          color: '#374151', // Label color
           display: true,
           text: `${Data?.gadget_name} (${power})`,
           font: {
@@ -496,6 +670,7 @@ const labelsData =
         },
         display: true,
         ticks: {
+          color: '#374151',
           // stepSize: (Data?.gadget_type === 'intermidiateHumidity' || Data?.gadget_type === 'intermidiateTemp') ? step : undefined,
           // min: (Data?.gadget_type === 'intermidiateHumidity' || Data?.gadget_type === 'intermidiateTemp') ? minRange : undefined,
           // max: Data?.gadget_type === 'intermidiateHumidity' ? maxRange : undefined,
@@ -701,6 +876,7 @@ const labelsData =
     <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 600, height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 0, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
 {/* bgcolor: '#C7E7FF', */}
 
+      {/* meter name */}
       <Box ref={ref} sx={{ color: tempCheck?.fontColor, position: 'relative', bottom: 10 }}>
         <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
           <Typography
@@ -722,6 +898,7 @@ const labelsData =
       </Box>
 
 
+        {/* gadget name */}
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', color: tempCheck?.colors, gap: 1, position: 'relative', top: 30, left: 15 }}>
         {/* {getIcon(Data?.gadget_type)?.render({ width: 32, height: 32, color: tempCheck?.colors, textAlign: 'left' })} */}
         {getIcon(Data?.gadget_type)?.render({
@@ -743,7 +920,7 @@ const labelsData =
         </Typography>
       </Box>
 
-
+        {/* value + datetimestamp */}
       <Box sx={{ display: 'flex', justifyContent: Data?.gadget_type === 'intermidiateValve' ? 'center' : 'space-evenly', alignItems: 'center', position: 'relative', bottom: Data?.gadget_type === 'intermidiateValve' ? 85 : 44, gap: 0, left: 15 }}>
 
 
@@ -848,7 +1025,7 @@ const labelsData =
                   : ""} */}
 
 
-            {Data?.timestamp?.length
+          {Data?.timestamp?.length
             ? (() => {
                 const [datePart, timePart] =
                   Data.timestamp[Data.timestamp.length - 1].split(", ");
@@ -858,6 +1035,7 @@ const labelsData =
                 return `${day}/${month}/20${year}, ${timePart}`;
               })()
             : ""}
+            
               </Typography>
             </Box>
 
@@ -880,6 +1058,317 @@ const labelsData =
         </Box>
       </Box>
     </Card >
+
+
+  // 1st Card
+  // <Card className="iaq-card">
+  
+  //   {/* Header */}
+  //   <div className="iaq-header">
+  
+  //     <div>
+  //       <h3>IAQ - Location</h3>
+  //       <p>Sensor sensorNo</p>
+  //     </div>
+  
+  //     <div className="iaq-badge">
+  //       AQI Good · aqi
+  //     </div>
+  
+  //   </div>
+  
+  //   <hr />
+  
+  //   {/* Particulates */}
+  //   <div className="iaq-section">
+  
+  //     <h4>PARTICULATES & GASES</h4>
+  
+  //     <div className="iaq-grid">
+  
+  //       {gases.map(item => (
+  //         <div className="iaq-metric-card">
+  
+  //           <span>{item.label}</span>
+  
+  //           <div>
+  //             <strong>{item.value}</strong>
+  //             <small>{item.unit}</small>
+  //           </div>
+  
+  //           <span className="status-dot"></span>
+  
+  //         </div>
+  //       ))}
+  
+  //     </div>
+  
+  //   </div>
+  
+  //   {/* Environment */}
+  //   <div className="iaq-section">
+  
+  //     <h4>ENVIRONMENT</h4>
+  
+  //     <div className="iaq-grid env-grid">
+  
+  //       {environment.map(item => (
+  //         <div className="iaq-metric-card">
+  
+  //           <span>{item.label}</span>
+  
+  //           <div>
+  //             <strong>{item.value}</strong>
+  //             <small>{item.unit}</small>
+  //           </div>
+  
+  //           <span className="status-dot"></span>
+  
+  //         </div>
+  //       ))}
+  
+  //     </div>
+  
+  //   </div>
+  
+  // </Card>
+
+  // 2nd Card
+//   <div className="em-card">
+
+//   {/* Header */}
+//   <div className="em-header">
+//     <div>
+//       <h3>{Data?.meter_name}</h3>
+//       <p>
+//         Meter 4 of 15 · 114 BACnet points · last update 11:42
+//       </p>
+//     </div>
+
+//     <div className="em-status">
+//       <span className="status-dot"></span>
+//       Online
+//     </div>
+//   </div>
+
+//   <div className="em-divider"></div>
+
+//   {/* Summary */}
+//   <div className="em-summary">
+
+//     <div className="em-metric">
+//       <span>Active power</span>
+//       <h2>38.4 <small>kW</small></h2>
+//     </div>
+
+//     <div className="em-metric">
+//       <span>Apparent</span>
+//       <h2>42.1 <small>kVA</small></h2>
+//     </div>
+
+//     <div className="em-metric">
+//       <span>Power factor</span>
+//       <h2>0.91</h2>
+//     </div>
+
+//     <div className="em-metric">
+//       <span>Frequency</span>
+//       <h2>49.98 <small>Hz</small></h2>
+//     </div>
+
+//   </div>
+
+//   <div className="em-divider"></div>
+
+//   {/* Details */}
+//   <div className="em-details">
+
+//     <div className="em-section">
+
+//       <h4>VOLTAGE</h4>
+
+//       <div className="em-row">
+//         <span>VR · VY · VB</span>
+//         <strong>238 · 240 · 239 V</strong>
+//       </div>
+
+//       <div className="em-row">
+//         <span>VRY</span>
+//         <strong>414 V</strong>
+//       </div>
+
+//       <div className="em-row">
+//         <span>VYB</span>
+//         <strong>416 V</strong>
+//       </div>
+
+//       <div className="em-row">
+//         <span>VBR</span>
+//         <strong>413 V</strong>
+//       </div>
+
+//       <div className="em-row">
+//         <span>Imbalance</span>
+//         <strong>0.6%</strong>
+//       </div>
+
+//     </div>
+
+//     <div className="em-section">
+
+//       <h4>CURRENT</h4>
+
+//       <div className="em-row">
+//         <span>IR · IY · IB</span>
+//         <strong>58 · 60 · 59 A</strong>
+//       </div>
+
+//       <div className="em-row">
+//         <span>Total current</span>
+//         <strong>177 A</strong>
+//       </div>
+
+//       <div className="em-row">
+//         <span>Imbalance</span>
+//         <strong>1.7%</strong>
+//       </div>
+
+//     </div>
+
+//   </div>
+
+//   <div className="em-divider"></div>
+
+//   {/* Footer */}
+//   <div className="em-footer">
+
+//     <div>
+//       <span>kWh Today</span>
+//       <h3>412.6</h3>
+//     </div>
+
+//     <div>
+//       <span>Cumulative kWh</span>
+//       <h3>184,712</h3>
+//     </div>
+
+//     <div>
+//       <span>Load Hours</span>
+//       <h3>3,184</h3>
+//     </div>
+
+//   </div>
+
+// </div>
+
+  // 3rd Card
+//   <div className="ahu-card">
+
+//   <div className="ahu-header">
+
+//     <div>
+//       <h3>{ahuData.name}</h3>
+//       <p>{ahuData.device}</p>
+//     </div>
+
+//     <div className="ahu-header-right">
+
+//       <div className="ahu-running">
+//         ● {ahuData.status}
+//       </div>
+
+//       <div className="ahu-mode">
+//         {ahuData.mode}
+//       </div>
+
+//       <div className="ahu-time">
+//         {ahuData.time}
+//       </div>
+
+//     </div>
+
+//   </div>
+
+//   <div className="ahu-divider"></div>
+
+//   {/* Top Metrics */}
+//   <div className="ahu-metrics">
+
+//     {ahuData.metrics.map((item,index)=>(
+//       <div className="ahu-metric" key={index}>
+
+//         <span>{item.label}</span>
+
+//         <h2>
+//           {item.value}
+//           <small>{item.unit}</small>
+//         </h2>
+
+//         {item.subText && (
+//           <p>{item.subText}</p>
+//         )}
+
+//       </div>
+//     ))}
+
+//   </div>
+
+//   <div className="ahu-divider"></div>
+
+//   {/* Details */}
+//   <div className="ahu-details">
+
+//     <div className="ahu-section">
+
+//       <h4>AIR-SIDE</h4>
+
+//       {ahuData.airSide.map((item,index)=>(
+//         <div className="ahu-row" key={index}>
+//           <span>{item.label}</span>
+//           <strong>{item.value}</strong>
+//         </div>
+//       ))}
+
+//     </div>
+
+//     <div className="ahu-section">
+
+//       <h4>WATER-SIDE (COOLING)</h4>
+
+//       {ahuData.waterSide.map((item,index)=>(
+//         <div className="ahu-row" key={index}>
+//           <span>{item.label}</span>
+//           <strong>{item.value}</strong>
+//         </div>
+//       ))}
+
+//     </div>
+
+//   </div>
+
+//   <div className="ahu-divider"></div>
+
+//   {/* Safety */}
+//   <div className="ahu-safety">
+
+//     <h4>SAFETY & CONDITION</h4>
+
+//     <div className="ahu-safety-grid">
+
+//       {ahuData.safety.map((item,index)=>(
+//         <div className="ahu-safety-item" key={index}>
+//           <span className="safe-dot"></span>
+//           {item}
+//         </div>
+//       ))}
+
+//     </div>
+
+//   </div>
+
+// </div>
+
+
   );
 };
 

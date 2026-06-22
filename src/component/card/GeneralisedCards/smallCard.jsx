@@ -8,6 +8,7 @@ import { iconsCon } from "../../config/iconsConfig";
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import CircleIcon from '@mui/icons-material/Circle';
 import OfflineBoltIcon from '@mui/icons-material/OfflineBolt';
+import { GADGET_COLORS } from '../../data/gadgetColors';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
@@ -43,6 +44,9 @@ const SmallCard = ({ Data }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const { ref } = useFitText();
   const [isBlinking, setIsBlinking] = useState(true);
+
+  // colors Configs
+    const gadgetConfig = GADGET_COLORS[Data.gadget_name];
 
   const convertPower = (value, unit) => {
     if (value == null || isNaN(value)) return 0;
@@ -219,11 +223,13 @@ const SmallCard = ({ Data }) => {
 
     if (!value) {
       // console.log(1);
-      
+      console.log('smalll')
       return {
-        bgColor: '#E5EBEB',
+        // bgColor: '#E5EBEB',
+        bgColor: gadgetConfig?.bg || "#FFFFFF",
         borderColor: '#E5EBEB',
-        colors: '#757676',
+        // colors: '#757676',
+        colors: gadgetConfig?.color || "#006DBC",
         fontColor: 'black',
       }
     }
@@ -232,9 +238,11 @@ const SmallCard = ({ Data }) => {
       // console.log(2);
       
       return {
-        bgColor: '#E9EEEF',
+        // bgColor: '#E9EEEF',
+        bgColor: gadgetConfig?.bg || "#FFFFFF",
         borderColor: '#E9EEEF',
-        colors: '#006DBC',
+        // colors: '#006DBC',
+        colors: gadgetConfig?.color || "#006DBC",
         fontColor: 'black',
       }
     }
@@ -615,8 +623,9 @@ const SmallCard = ({ Data }) => {
     //   </Box>
     // </Card>
     // );
-    <Card sx={{ ...styles.thinBorder, width: 295, height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: '#ECF5FF', borderColor: tempCheck.borderColor, borderWidth: 2 }}>
+    <Card sx={{ ...styles.thinBorder, width: 295, height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 4, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck.borderColor, borderWidth: 2 }}>
 
+  {/* meter name */}
      <Box ref={ref} sx={{ color: tempCheck.fontColor,  }}>
         <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
           <Typography
@@ -634,7 +643,7 @@ const SmallCard = ({ Data }) => {
         </ToolTipBox>
       </Box>
 
-
+      {/* gadget_name and value */}
      <Box sx={{ display: 'flex',justifyContent : 'center', flexDirection: 'column', gap: 2.5, }}>
         <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center', color: tempCheck.colors, position: 'relative', left: 0, gap: 1 }}>
           {getIcon(Data?.gadget_type)?.render({ width: 32, height: 32, color: tempCheck.colors, })}
