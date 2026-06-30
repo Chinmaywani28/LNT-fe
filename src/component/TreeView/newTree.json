@@ -11,6 +11,7 @@
                             {
                                 "Name": "CO2 VOC"
                             }
+                           
                         ]
                     },
                     {
@@ -20,6 +21,7 @@
                                 "Name": "CO2 VOC"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Up B1 to Ground Flr",
@@ -28,6 +30,7 @@
                                 "Name": "CO2 VOC"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Up B2 to B1",
@@ -36,6 +39,7 @@
                                 "Name": "CO2 VOC"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Down B-1 to B-2",
@@ -44,6 +48,7 @@
                                 "Name": "CO2 VOC"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Down Ground flr to B-1",
@@ -52,6 +57,7 @@
                                 "Name": "CO2 VOC"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Down Ground flr to B-1",
@@ -60,6 +66,7 @@
                                 "Name": "NO2 Sensor"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Down B1 to B2",
@@ -68,6 +75,7 @@
                                 "Name": "NO2 Sensor"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Up B1 to Ground Flr",
@@ -76,6 +84,7 @@
                                 "Name": "NO2 Sensor"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Up B2 to B1",
@@ -84,6 +93,7 @@
                                 "Name": "NO2 Sensor"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Down B-1 to B2",
@@ -92,6 +102,7 @@
                                 "Name": "NO2 Sensor"
                             }
                         ]
+
                     },
                     {
                         "Floor_Number": "Ramp Down Ground flr to B1",
@@ -100,41 +111,11 @@
                                 "Name": "NO2 Sensor"
                             }
                         ]
+
                     },
+
                     {
-                        "Floor_Number": "Staircase Centre",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Front",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Back",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -243,39 +224,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Staircase Centre",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Front",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Back",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -384,39 +333,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Staircase Centre",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Front",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Back",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -426,42 +343,10 @@
                 ]
             },
             {
-                "Name": "Ground Floor (G0)",
+                "Name": "Ground Floor (GF)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Centre",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Front",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Back",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -480,47 +365,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 5",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 6",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -597,23 +442,7 @@
                 "Name": "First Floor (F1)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -632,39 +461,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 5",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -736,7 +533,7 @@
                 "Name": "Second floor(F2)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -744,23 +541,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 1",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -768,39 +549,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "BIM Seminar Hall 2 Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "BIM Seminar Hall 2 Right",
+                        "Floor_Number": "BIM Seminar Hall",
                         "Location": [
                             {
                                 "Name": "Illumination Sensor"
@@ -899,23 +648,7 @@
                 "Name": "Third Floor (F3)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -939,15 +672,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Discussion Room 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Discussion Room 2",
+                        "Floor_Number": "Discussion Room",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -963,31 +688,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Seminar Hall 1",
-                        "Location": [
-                            {
-                                "Name": "CO2 VOC"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Seminar Hall 2",
-                        "Location": [
-                            {
-                                "Name": "CO2 VOC"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Seminar Hall 3",
-                        "Location": [
-                            {
-                                "Name": "CO2 VOC"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Seminar Hall 4",
+                        "Floor_Number": "Seminar Hall",
                         "Location": [
                             {
                                 "Name": "CO2 VOC"
@@ -1003,31 +704,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1043,15 +720,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1080,7 +749,7 @@
                 "Name": "Fourth Floor (F4)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1088,23 +757,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 1",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1112,39 +765,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 2",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1173,7 +794,7 @@
                 "Name": "Fifth Floor (F5)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1181,23 +802,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 1",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1205,39 +810,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 2",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1266,23 +839,7 @@
                 "Name": "Sixth Floor (F6)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1306,31 +863,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1359,23 +892,7 @@
                 "Name": "Seventh Floor (F7)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1399,31 +916,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1452,23 +945,7 @@
                 "Name": "Eighth Floor (F8)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1492,31 +969,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1545,23 +998,7 @@
                 "Name": "Ninth Floor (F9)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1585,31 +1022,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1638,23 +1051,7 @@
                 "Name": "Tenth Floor (F10)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1678,31 +1075,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1731,23 +1104,7 @@
                 "Name": "Eleventh Floor (F11)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1771,31 +1128,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1824,23 +1157,7 @@
                 "Name": "Twelveth Floor (F12)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1864,31 +1181,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -1917,23 +1210,7 @@
                 "Name": "Thirteenth Floor (F13)",
                 "Floors": [
                     {
-                        "Floor_Number": "Staircase Left",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Middle",
-                        "Location": [
-                            {
-                                "Name": "Illumination sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Staircase Right",
+                        "Floor_Number": "Staircase",
                         "Location": [
                             {
                                 "Name": "Illumination sensor"
@@ -1965,15 +1242,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry Left",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry Right",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1989,31 +1258,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "AHU Room 1",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 2",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 3",
-                        "Location": [
-                            {
-                                "Name": "Noise Detection"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "AHU Room 4",
+                        "Floor_Number": "AHU Room",
                         "Location": [
                             {
                                 "Name": "Noise Detection"
@@ -2137,3 +1382,4 @@
         ]
     }
 }
+
