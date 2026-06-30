@@ -2,7 +2,7 @@ import MediumCard from "../card/GeneralisedCards/mediumCard";
 import SmallCard from "../card/GeneralisedCards/smallCard";
 import SmallPressureMeter from "../card/GeneralisedCards/smallPressureMeter";
 import ValveMediumCard from "../card/GeneralisedCards/valveMediumCard";
-import LargeCardParameters from "../card/GeneralisedCards/largeCardParameters";
+// import LargeCardParameters from "../card/GeneralisedCards/largeCardParameters";
 
 export const chartsObj = [
   {
@@ -31,19 +31,19 @@ export const chartsObj = [
       />
     ),
   },
-  {
-    chartId: "telemetry",
-    chartName: "Large IAQ Sensor Chart",
-    render: (props) => <LargeCardParameters {...props}/>,
-    type: ["iaq"],
-    renderImg: () => (
-      <img
-        src="intermEnergy.png"
-        alt="abcd"
-        style={{ width: "auto", height: "auto" }}
-      />
-    ),
-  },
+  // {
+  //   chartId: "telemetry",
+  //   chartName: "Large IAQ Sensor Chart",
+  //   render: (props) => <LargeCardParameters {...props}/>,
+  //   type: ["iaq"],
+  //   renderImg: () => (
+  //     <img
+  //       src="intermEnergy.png"
+  //       alt="abcd"
+  //       style={{ width: "auto", height: "auto" }}
+  //     />
+  //   ),
+  // },
   {
     chartId: "basicPower",
     chartName: "Basic Power Chart",
