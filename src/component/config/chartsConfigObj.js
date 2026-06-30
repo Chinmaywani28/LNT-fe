@@ -3,6 +3,8 @@ import SmallCard from "../card/GeneralisedCards/smallCard";
 import SmallPressureMeter from "../card/GeneralisedCards/smallPressureMeter";
 import ValveMediumCard from "../card/GeneralisedCards/valveMediumCard";
 import LargeCardParameters from "../card/GeneralisedCards/largeCardParameters";
+import LargeCardParametersTwo from "../card/GeneralisedCards/largeCardParametersTwo";
+import LargeCardParametersThree from "../card/GeneralisedCards/largeCardParametersThree";
 
 export const chartsObj = [
   {
@@ -32,10 +34,14 @@ export const chartsObj = [
     ),
   },
   {
-    chartId: "telemetry",
+    chartId: "intermidiatetelemetry",
     chartName: "Large IAQ Sensor Chart",
-    render: (props) => <LargeCardParameters {...props}/>,
-    type: ["iaq"],
+    // render: (props) => <LargeCardParameters {...props}/>,
+    render: (props) => {
+        console.log('prprpr', props)
+        return <LargeCardParameters {...props}/>
+    },
+    type: ["telemetry"],
     renderImg: () => (
       <img
         src="intermEnergy.png"
@@ -44,6 +50,44 @@ export const chartsObj = [
       />
     ),
   },
+  
+  {
+    chartId: "obEnergyMeter",
+    chartName: "OB Energy Meter",
+    render: (props) => {
+        console.log('prprpr', props)
+        return <LargeCardParametersTwo {...props}/>
+    },
+    type: ["obEnergyMeter"],
+    renderImg: () => (
+      <img
+        src="intermEnergy.png"
+        alt="abcd"
+        style={{ width: "auto", height: "auto" }}
+      />
+    ),
+  },
+
+
+  {
+    chartId: "ahu",
+    chartName: "AHU Unit",
+    render: (props) => {
+        console.log('prprpr', props)
+        return <LargeCardParametersThree {...props}/>
+    },
+    type: ["ahu"],
+    renderImg: () => (
+      <img
+        src="intermEnergy.png"
+        alt="abcd"
+        style={{ width: "auto", height: "auto" }}
+      />
+    ),
+  },
+
+
+
   {
     chartId: "basicPower",
     chartName: "Basic Power Chart",
@@ -229,7 +273,14 @@ export const chartsObj = [
   {
     chartId: "intermidiateLux",
     chartName: "Intermidiate LUX Chart",
-    render: (props) => <MediumCard {...props} />,
+    // render: (props) => <MediumCard {...props} />,
+    render: (props) => {
+
+        console.log('asdfkjviahf', props)
+
+       return <MediumCard {...props} />
+    }, 
+
     type: ["lux"],
     renderImg: () => (
       <img

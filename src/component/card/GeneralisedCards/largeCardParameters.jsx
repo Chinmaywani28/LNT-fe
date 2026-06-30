@@ -9,140 +9,55 @@ import { iconsCon } from "../../config/iconsConfig";
 import * as echarts from "echarts";
 import LineChart from './lineChart';
 import GaugeChart from './gauge';
-import './mediumCard.css';
-import { GADGET_COLORS } from '../../data/gadgetColors';
+import './LargeCardParameter.css';
+
+
+export const IAQ_COLORS = {
+  "PM2.5": {
+    bg: "#FCE4EC",
+    color: "#E91E63",
+  },
+  "PM10": {
+    bg: "#F8BBD0",
+    color: "#C2185B",
+  },
+  CO2: {
+    bg: "#E8F5E9",
+    color: "#2E7D32",
+  },
+  TVOC: {
+    bg: "#F3E5F5",
+    color: "#8E24AA",
+  },
+  SO2: {
+    bg: "#FFF3E0",
+    color: "#F57C00",
+  },
+  NO2: {
+    bg: "#FBE9E7",
+    color: "#D84315",
+  },
+  CO: {
+    bg: "#FFEBEE",
+    color: "#D32F2F",
+  },
+  OZONE: {
+    bg: "#E3F2FD",
+    color: "#1976D2",
+  },
+  TEMP: {
+    bg: "#FFF8E1",
+    color: "#FB8C00",
+  },
+  RH: {
+    bg: "#E1F5FE",
+    color: "#039BE5",
+  },
+};
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
-const MediumCard = ({ Data, chartData,openSidebar }) => {
-
-  console.log('datata', Data, chartData,openSidebar )
-  // third card data
-  const ahuData = {
-  name: "AHU-1 · 10F",
-  device: "Device 1 · obj inst 1320-1349",
-  status: "Running",
-  mode: "Auto",
-  time: "11:42:08",
-
-  metrics: [
-    {
-      label: "Supply Air",
-      value: 14.2,
-      unit: "°C"
-    },
-    {
-      label: "Return Air",
-      value: 22.8,
-      unit: "°C",
-      subText: "SP 23.0°C"
-    },
-    {
-      label: "CO₂",
-      value: 512,
-      unit: "ppm"
-    },
-    {
-      label: "Humidity",
-      value: 54,
-      unit: "%"
-    }
-  ],
-
-  airSide: [
-    { label: "Fan Status", value: "ON" },
-    { label: "Fan Speed", value: "72 %" },
-    { label: "Fan Power", value: "4.8 kW" },
-    { label: "Airflow", value: "3,420 CFM" },
-    { label: "Duct ΔP", value: "245 Pa (SP 250)" },
-    { label: "EC Fans 1-2-3", value: "● ● ●" }
-  ],
-
-  waterSide: [
-    { label: "CHW Inlet", value: "8.2 °C" },
-    { label: "CHW Outlet", value: "13.6 °C" },
-    { label: "ΔT (coil)", value: "5.4 K" },
-    { label: "PICV cmd", value: "65 %" },
-    { label: "PICV feedback", value: "64 %" },
-    { label: "ADPT", value: "12.1 °C" }
-  ],
-
-  safety: [
-    "Filter",
-    "Fire",
-    "E-stop",
-    "Door",
-    "Damper",
-    "Comm"
-  ]
-};
-
-  // second card data
-  const gases = [
-  {
-    label: "PM2.5",
-    value: 12,
-    unit: "μg/m³",
-    status: "good",
-  },
-  {
-    label: "PM10",
-    value: 28,
-    unit: "μg/m³",
-    status: "good",
-  },
-  {
-    label: "CO₂",
-    value: 912,
-    unit: "ppm",
-    status: "moderate",
-  },
-  {
-    label: "TVOC",
-    value: 340,
-    unit: "μg/m³",
-    status: "good",
-  },
-  {
-    label: "CO",
-    value: 0.4,
-    unit: "ppm",
-    status: "good",
-  },
-  {
-    label: "NO₂",
-    value: 22,
-    unit: "μg/m³",
-    status: "good",
-  },
-  {
-    label: "SO₂",
-    value: 9,
-    unit: "μg/m³",
-    status: "good",
-  },
-  {
-    label: "O₃",
-    value: 48,
-    unit: "μg/m³",
-    status: "good",
-  },
-];
-
-const environment = [
-  {
-    label: "Temperature",
-    value: 24.2,
-    unit: "°C",
-    status: "good",
-  },
-  {
-    label: "Humidity",
-    value: 52,
-    unit: "%",
-    status: "good",
-  },
-];
+const LargeCardParameters = ({ Data, chartData,openSidebar }) => {
 
   console.log('DataData::', Data);
 
@@ -257,8 +172,6 @@ const labelsData =
   const convertedMinPower = minValue ? convertPower(minValue, power) : null;
   const convertedMaxPower = maxValue ? convertPower(maxValue, power) : null;
   const convertedCriticalPower = criticalValue ? convertPower(criticalValue, power) : null;
-  // colors Configs
-  const gadgetConfig = GADGET_COLORS[Data.gadget_name];
 
   const getBorderColor = (context) => {
     try {
@@ -310,12 +223,7 @@ const labelsData =
 
         // borderColor: (context) => getBorderColor(context),
         // backgroundColor: (context) => getBorderColor(context),
-        // borderColor: '#006DBC',
-
-
-        // added for chart color(line chart)
-        borderColor: gadgetConfig?.color || "#006DBC",
-
+        borderColor: '#006DBC',
         backgroundColor: (context) => getBorderColor(context),
 
 
@@ -476,40 +384,32 @@ const labelsData =
 
       
   // }
-
-  
-
     
       
 
 
   const getColorSettings = (value) => {
-    // console.log('valuevalue::',value, minValue, maxValue, criticalValue);
+    console.log('valuevalue::',value, minValue, maxValue, criticalValue);
     try {
       if (!value) {
-        // console.log('!value')
         return {
-          // bgColor: '#ECF5FF',
-          bgColor: gadgetConfig?.bg || "#FFFFFF",
+          bgColor: '#ECF5FF',
           borderColor: '#E5EBEB',
-          // colors: '#757676',
-          colors: gadgetConfig?.color || "#006DBC",
+          colors: '#757676',
           fontColor: 'black',
         }
       }
 
       if ((!minValue || !maxValue)) {
-        // console.log('!minValue || !maxValue')
         return {
-          bgColor: gadgetConfig?.bg || "#FFFFFF",
+          bgColor: '#ECF5FF',
           borderColor: '#E9EEEF',
-          colors: gadgetConfig?.color || "#006DBC",
+          colors: '#006DBC',
           fontColor: 'black',
         }
       }
 
       if (value > minValue && value < maxValue) {
-        // console.log('value > minValue && value < maxValue')
 
         return {
           bgColor: '#ECF5FF',
@@ -518,7 +418,6 @@ const labelsData =
           fontColor: 'black',
         };
       } else if (value >= maxValue && value < criticalValue) {
-        // console.log('value >= maxValue && value < criticalValue')
 
         return {
           bgColor: '#FFF0D9',
@@ -527,8 +426,6 @@ const labelsData =
           fontColor: '#FF6B00',
         };
       } else if (value >= criticalValue || value <= minValue) {
-        console.log('value >= criticalValue || value <= minValue')
-
         return {
           bgColor: '#FFD9D9',
           borderColor: '#FF0E0E',
@@ -550,10 +447,10 @@ const labelsData =
 
   const powerValue = Data?.meter_reading?.length ? Data.meter_reading[Data.meter_reading.length - 1] : 0;
   const convertedValue = Data ? convertPower(powerValue, power) : 0;
-  const formattedValue = Data ? formatValue(parseFloat(convertedValue)) : 0;
-  const tempCheck = getColorSettings(powerValue);
-  const numericValue = formattedValue.match(/(\d+(\.\d+)?)/g)?.join('') || "";
-  const textValue = formattedValue.match(/[a-zA-Z]+/g)?.join('') || "";
+  // const formattedValue = Data ? formatValue(parseFloat(convertedValue)) : 0;
+  // const tempCheck = getColorSettings(powerValue);
+  // const numericValue = formattedValue.match(/(\d+(\.\d+)?)/g)?.join('') || "";
+  // const textValue = formattedValue.match(/[a-zA-Z]+/g)?.join('') || "";
 
   function getGradient(ctx, data) {
     try {
@@ -627,12 +524,7 @@ const labelsData =
     },
     scales: {
       x: {
-        // x axis color
-        border: {
-          color: '#374151', // X-axis line color
-        },
         title: {
-          color: '#374151', // Label color
           display: false,
           text: `Time Period`,
           font: {
@@ -646,7 +538,6 @@ const labelsData =
           display: false,
         },
         ticks: {
-           color: '#374151',
           font: {
             size: 10,
             weight: 'bold',
@@ -655,12 +546,7 @@ const labelsData =
         },
       },
       y: {
-        // Y axis color
-        border: {
-          color: '#374151', // X-axis line color
-        },
         title: {
-          color: '#374151', // Label color
           display: true,
           text: `${Data?.gadget_name} (${power})`,
           font: {
@@ -670,7 +556,6 @@ const labelsData =
         },
         display: true,
         ticks: {
-          color: '#374151',
           // stepSize: (Data?.gadget_type === 'intermidiateHumidity' || Data?.gadget_type === 'intermidiateTemp') ? step : undefined,
           // min: (Data?.gadget_type === 'intermidiateHumidity' || Data?.gadget_type === 'intermidiateTemp') ? minRange : undefined,
           // max: Data?.gadget_type === 'intermidiateHumidity' ? maxRange : undefined,
@@ -845,13 +730,13 @@ const labelsData =
     }
   }
 
-  const blinkColor = Data?.status
-    ? isBlinking
-      ? tempCheck.colors
-      : tempCheck.colors // Blink to black if active
-    : isBlinking
-      ? '#dd1503'
-      : '#757676';
+  // const blinkColor = Data?.status
+  //   ? isBlinking
+  //     ? tempCheck.colors
+  //     : tempCheck.colors // Blink to black if active
+  //   : isBlinking
+  //     ? '#dd1503'
+  //     : '#757676';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -871,505 +756,440 @@ const labelsData =
 
   // console.log(Data,openSidebar,'op');
 
+//   const gases = [
+//   {
+//     label: "PM2.5",
+//     value: 12,
+//     unit: "μg/m³",
+//     status: "good",
+//   },
+//   {
+//     label: "PM10",
+//     value: 28,
+//     unit: "μg/m³",
+//     status: "good",
+//   },
+//   {
+//     label: "CO₂",
+//     value: 912,
+//     unit: "ppm",
+//     status: "moderate",
+//   },
+//   {
+//     label: "TVOC",
+//     value: 340,
+//     unit: "μg/m³",
+//     status: "good",
+//   },
+//   {
+//     label: "CO",
+//     value: 0.4,
+//     unit: "ppm",
+//     status: "good",
+//   },
+//   {
+//     label: "NO₂",
+//     value: 22,
+//     unit: "μg/m³",
+//     status: "good",
+//   },
+//   {
+//     label: "SO₂",
+//     value: 9,
+//     unit: "μg/m³",
+//     status: "good",
+//   },
+//   {
+//     label: "O₃",
+//     value: 48,
+//     unit: "μg/m³",
+//     status: "good",
+//   },
+// ];
+
+  const parameters = [
+     // Set 1
+  { label: "PM2.5", value: 12, unit: "μg/m³", status: "good" },
+  { label: "PM10", value: 28, unit: "μg/m³", status: "good" },
+  { label: "CO2", value: 620, unit: "ppm", status: "good" },
+  { label: "TVOC", value: 180, unit: "ppb", status: "good" },
+  { label: "SO2", value: 8, unit: "ppb", status: "good" },
+  { label: "NO2", value: 18, unit: "ppb", status: "moderate" },
+  { label: "CO", value: 0.4, unit: "ppm", status: "good" },
+  { label: "OZONE", value: 32, unit: "ppb", status: "good" },
+  
+
+  // Set 2
+  { label: "PM2.5", value: 15, unit: "μg/m³", status: "good" },
+  { label: "PM10", value: 35, unit: "μg/m³", status: "moderate" },
+  { label: "CO2", value: 710, unit: "ppm", status: "good" },
+  { label: "TVOC", value: 220, unit: "ppb", status: "moderate" },
+  { label: "SO2", value: 10, unit: "ppb", status: "good" },
+  { label: "NO2", value: 20, unit: "ppb", status: "moderate" },
+  { label: "CO", value: 0.6, unit: "ppm", status: "good" },
+  { label: "OZONE", value: 38, unit: "ppb", status: "good" },
+  
+
+  // Set 3
+  { label: "PM2.5", value: 18, unit: "μg/m³", status: "moderate" },
+  { label: "PM10", value: 42, unit: "μg/m³", status: "moderate" },
+  { label: "CO2", value: 830, unit: "ppm", status: "moderate" },
+  { label: "TVOC", value: 310, unit: "ppb", status: "moderate" },
+  { label: "SO2", value: 12, unit: "ppb", status: "good" },
+  { label: "NO2", value: 24, unit: "ppb", status: "moderate" },
+  { label: "CO", value: 0.8, unit: "ppm", status: "good" },
+  { label: "OZONE", value: 45, unit: "ppb", status: "moderate" },
+  
+
+  // Set 4
+  { label: "PM2.5", value: 10, unit: "μg/m³", status: "good" },
+  { label: "PM10", value: 22, unit: "μg/m³", status: "good" },
+  { label: "CO2", value: 560, unit: "ppm", status: "good" },
+  { label: "TVOC", value: 140, unit: "ppb", status: "good" },
+  { label: "SO2", value: 6, unit: "ppb", status: "good" },
+  { label: "NO2", value: 15, unit: "ppb", status: "good" },
+  { label: "CO", value: 0.3, unit: "ppm", status: "good" },
+  { label: "OZONE", value: 28, unit: "ppb", status: "good" },
+  
+  ]
+
+const environment = [
+  // {
+  //   label: "Temperature",
+  //   value: 24.2,
+  //   unit: "°C",
+  //   status: "good",
+  // },
+  // {
+  //   label: "Humidity",
+  //   value: 52,
+  //   unit: "%",
+  //   status: "good",
+  // },
+
+  { label: "TEMP", value: 24.5, unit: "°C", status: "good" },
+  { label: "RH", value: 48, unit: "%", status: "good" },
+  { label: "TEMP", value: 25.1, unit: "°C", status: "good" },
+  { label: "RH", value: 52, unit: "%", status: "good" },
+  { label: "TEMP", value: 26.3, unit: "°C", status: "moderate" },
+  { label: "RH", value: 58, unit: "%", status: "good" },
+  { label: "TEMP", value: 23.8, unit: "°C", status: "good" },
+  { label: "RH", value: 46, unit: "%", status: "good" },
+];
 
   return (
-    <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 600, height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 0, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
-{/* bgcolor: '#C7E7FF', */}
+//     <Card sx={{ ...styles.thinBorder, width: Data?.gadget_type === "intermidiateValve" ? 1080 : 600, height: '220px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: 0, borderRadius: '20px', bgcolor: tempCheck?.bgColor, borderColor: tempCheck?.borderColor, borderWidth: 2 }}>
+// {/* bgcolor: '#C7E7FF', */}
 
-      {/* meter name */}
-      <Box ref={ref} sx={{ color: tempCheck?.fontColor, position: 'relative', bottom: 10 }}>
-        <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
-          <Typography
-            sx={{
-              textAlign: 'left',
-              fontWeight: 'bold',
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              fontSize: 18,
-              paddingLeft: '18px', // Move text slightly right,
-              position: 'relative',
-    top: '20px'
-            }}
-          >
-            {Data?.meter_name?.toUpperCase() || 'N/A'}
-          </Typography>
-        </ToolTipBox>
-      </Box>
+//       <Box ref={ref} sx={{ color: tempCheck?.fontColor, position: 'relative', bottom: 10 }}>
+//         <ToolTipBox title={`${'Device Name : ' + (Data?.meter_name || 'N/A')}`} arrow>
+//           <Typography
+//             sx={{
+//               textAlign: 'left',
+//               fontWeight: 'bold',
+//               whiteSpace: 'nowrap',
+//               overflow: 'hidden',
+//               textOverflow: 'ellipsis',
+//               fontSize: 18,
+//               paddingLeft: '18px', // Move text slightly right,
+//               position: 'relative',
+//     top: '20px'
+//             }}
+//           >
+//             {Data?.meter_name?.toUpperCase() || 'N/A'}
+//           </Typography>
+//         </ToolTipBox>
+//       </Box>
 
 
-        {/* gadget name */}
-      <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', color: tempCheck?.colors, gap: 1, position: 'relative', top: 30, left: 15 }}>
-        {/* {getIcon(Data?.gadget_type)?.render({ width: 32, height: 32, color: tempCheck?.colors, textAlign: 'left' })} */}
-        {getIcon(Data?.gadget_type)?.render({
-          width: 32,
-          height: 32,
-          color: tempCheck?.colors,
-          style: { textAlign: 'left' }
-        })}
+//       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'left', color: tempCheck?.colors, gap: 1, position: 'relative', top: 30, left: 15 }}>
+//         {/* {getIcon(Data?.gadget_type)?.render({ width: 32, height: 32, color: tempCheck?.colors, textAlign: 'left' })} */}
+//         {getIcon(Data?.gadget_type)?.render({
+//           width: 32,
+//           height: 32,
+//           color: tempCheck?.colors,
+//           style: { textAlign: 'left' }
+//         })}
 
-        <Typography variant='h6' fontWeight='bold' sx={{
-          fontSize: '16px',
-          textAlign: 'left',
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis', width: (Data?.gadget_type === 'intermidiateCO2' || Data?.gadget_type === 'intermidiateCO') ? 205 : null
-        }}>
+//         <Typography variant='h6' fontWeight='bold' sx={{
+//           fontSize: '16px',
+//           textAlign: 'left',
+//           whiteSpace: 'nowrap',
+//           overflow: 'hidden',
+//           textOverflow: 'ellipsis', width: (Data?.gadget_type === 'intermidiateCO2' || Data?.gadget_type === 'intermidiateCO') ? 205 : null
+//         }}>
           
-          {Data?.gadget_name?.toUpperCase()}
-        </Typography>
-      </Box>
-
-        {/* value + datetimestamp */}
-      <Box sx={{ display: 'flex', justifyContent: Data?.gadget_type === 'intermidiateValve' ? 'center' : 'space-evenly', alignItems: 'center', position: 'relative', bottom: Data?.gadget_type === 'intermidiateValve' ? 85 : 44, gap: 0, left: 15 }}>
+//           {Data?.gadget_name?.toUpperCase()}
+//         </Typography>
+//       </Box>
 
 
-        <Box sx={{
-          display: 'flex', flexDirection: 'column', gap: Data?.meter_reading?.length ? 3 : 0, position: 'relative', top: 37, left: Data?.gadget_type === 'intermidiateValve' ? 60 : 0
-        }}>
-          {Data?.meter_reading?.length ?
-            <Box>
-              <Box sx={{
-                display: 'flex', justifyContent: 'center',
-                textAlign: 'center', fontSize: 45, fontWeight: 'bold', color: tempCheck?.colors, whiteSpace: 'nowrap',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-              }}>
-                <Typography sx={{ textAlign: 'center', fontSize: 40, fontWeight: 'bold', }}>{numericValue}</Typography>
-                <Typography sx={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 }}>{textValue}</Typography>
-                <sup style={{ position: 'relative', bottom: 25, }}>
-                  <FormControl sx={{ color: tempCheck?.colors }} size="small" variant="outlined">
-                    <Box onClick={handleClick} size='small' sx={{
-                      cursor: 'pointer', height: 35, marginTop: '30px',
-                    }}>
-                      <sup style={{ fontSize: 14, verticalAlign: 'top', color: tempCheck?.colors, }}>{power}</sup>
-                    </Box>
-                    <Menu id="temperature-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
-                      {(() => {
-                        switch (Data?.gadget_type) {
-                          case 'intermidiateEnergy':
-                            return [
-                              <MenuItem key="wh" onClick={() => handleMenuItemClick("Wh")}>Wh</MenuItem>,
-                              <MenuItem key="kwh" onClick={() => handleMenuItemClick("kWh")}>kWh</MenuItem>
-                            ];
-                          case 'intermidiateTemp':
-                            return [
-                              <MenuItem key="celsius" onClick={() => handleMenuItemClick("°C")}>°C</MenuItem>,
-                              <MenuItem key="fahrenheit" onClick={() => handleMenuItemClick("°F")}>°F</MenuItem>,
-                              <MenuItem key="kelvin" onClick={() => handleMenuItemClick("°K")}>°K</MenuItem>
-                            ];
-                          case 'intermidiatePower':
-                            return [
-                              <MenuItem key="w" onClick={() => handleMenuItemClick("W")}>W</MenuItem>,
-                              <MenuItem key="kw" onClick={() => handleMenuItemClick("kW")}>kW</MenuItem>
-                            ];
-                          case 'intermidiateHumidity':
-                            return [
-                              <MenuItem key="humidity" onClick={() => handleMenuItemClick("%")}>%</MenuItem>
-                            ];
-                          case 'intermidiateCO':
-                            return [
-                              <MenuItem key="co" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
-                            ];
-                          case 'intermidiateCO2':
-                            return [
-                              <MenuItem key="co2" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
-                            ];
-                          case 'intermidiatePressure':
-                            return [
-                              <MenuItem key="pressure" onClick={() => handleMenuItemClick("Pa")}>Pa</MenuItem>
-                            ];
-                          case 'intermidiateVibration':
-                            return [
-                              <MenuItem key="vibration" onClick={() => handleMenuItemClick("m/s2")}>m/s2</MenuItem>
-                            ];
-                          case 'intermidiateLux':
-                            return [
-                              <MenuItem key="lux" onClick={() => handleMenuItemClick("LUX")}>LUX</MenuItem>
-                            ];
-                          case 'intermidiateNoise':
-                            return [
-                              <MenuItem key="noise" onClick={() => handleMenuItemClick("dB")}>dB</MenuItem>
-                            ];
-                          case 'intermidiateFlow':
-                            return [
-                              <MenuItem key="flow" onClick={() => handleMenuItemClick("m3/h")}>m3/h</MenuItem>
-                            ];
-                          case 'intermidiateHeat':
-                            return [
-                              <MenuItem key="heat" onClick={() => handleMenuItemClick("mJ/h")}>mJ/h</MenuItem>
-                            ];
-                          case 'intermidiateCurrent':
-                            return [
-                              <MenuItem key="current" onClick={() => handleMenuItemClick("A")}>A</MenuItem>
-                            ];
-                          case 'intermidiateParticle':
-                            return [
-                              <MenuItem key="particle" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
-                            ];
-                          case 'intermidiateNO2':
-                            return [
-                              <MenuItem key="particle" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
-                            ];
-                          default:
-                            return null;
-                        }
-                      })()}
-                    </Menu>
-                  </FormControl>
-                </sup>
-              </Box>
-              <Typography sx={{ fontWeight: 'bold',fontSize : 14 }}>
-                {/* {Data?.timestamp?.length
-                  ? Data.timestamp[Data.timestamp.length - 1]
-                  : ""} */}
+//       <Box sx={{ display: 'flex', justifyContent: Data?.gadget_type === 'intermidiateValve' ? 'center' : 'space-evenly', alignItems: 'center', position: 'relative', bottom: Data?.gadget_type === 'intermidiateValve' ? 85 : 44, gap: 0, left: 15 }}>
 
 
-          {Data?.timestamp?.length
-            ? (() => {
-                const [datePart, timePart] =
-                  Data.timestamp[Data.timestamp.length - 1].split(", ");
+//         <Box sx={{
+//           display: 'flex', flexDirection: 'column', gap: Data?.meter_reading?.length ? 3 : 0, position: 'relative', top: 37, left: Data?.gadget_type === 'intermidiateValve' ? 60 : 0
+//         }}>
+//           {Data?.meter_reading?.length ?
+//             <Box>
+//               <Box sx={{
+//                 display: 'flex', justifyContent: 'center',
+//                 textAlign: 'center', fontSize: 45, fontWeight: 'bold', color: tempCheck?.colors, whiteSpace: 'nowrap',
+//                 overflow: 'hidden',
+//                 textOverflow: 'ellipsis',
+//               }}>
+//                 <Typography sx={{ textAlign: 'center', fontSize: 40, fontWeight: 'bold', }}>{numericValue}</Typography>
+//                 <Typography sx={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 }}>{textValue}</Typography>
+//                 <sup style={{ position: 'relative', bottom: 25, }}>
+//                   <FormControl sx={{ color: tempCheck?.colors }} size="small" variant="outlined">
+//                     <Box onClick={handleClick} size='small' sx={{
+//                       cursor: 'pointer', height: 35, marginTop: '30px',
+//                     }}>
+//                       <sup style={{ fontSize: 14, verticalAlign: 'top', color: tempCheck?.colors, }}>{power}</sup>
+//                     </Box>
+//                     <Menu id="temperature-menu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
+//                       {(() => {
+//                         switch (Data?.gadget_type) {
+//                           case 'intermidiateEnergy':
+//                             return [
+//                               <MenuItem key="wh" onClick={() => handleMenuItemClick("Wh")}>Wh</MenuItem>,
+//                               <MenuItem key="kwh" onClick={() => handleMenuItemClick("kWh")}>kWh</MenuItem>
+//                             ];
+//                           case 'intermidiateTemp':
+//                             return [
+//                               <MenuItem key="celsius" onClick={() => handleMenuItemClick("°C")}>°C</MenuItem>,
+//                               <MenuItem key="fahrenheit" onClick={() => handleMenuItemClick("°F")}>°F</MenuItem>,
+//                               <MenuItem key="kelvin" onClick={() => handleMenuItemClick("°K")}>°K</MenuItem>
+//                             ];
+//                           case 'intermidiatePower':
+//                             return [
+//                               <MenuItem key="w" onClick={() => handleMenuItemClick("W")}>W</MenuItem>,
+//                               <MenuItem key="kw" onClick={() => handleMenuItemClick("kW")}>kW</MenuItem>
+//                             ];
+//                           case 'intermidiateHumidity':
+//                             return [
+//                               <MenuItem key="humidity" onClick={() => handleMenuItemClick("%")}>%</MenuItem>
+//                             ];
+//                           case 'intermidiateCO':
+//                             return [
+//                               <MenuItem key="co" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
+//                             ];
+//                           case 'intermidiateCO2':
+//                             return [
+//                               <MenuItem key="co2" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
+//                             ];
+//                           case 'intermidiatePressure':
+//                             return [
+//                               <MenuItem key="pressure" onClick={() => handleMenuItemClick("Pa")}>Pa</MenuItem>
+//                             ];
+//                           case 'intermidiateVibration':
+//                             return [
+//                               <MenuItem key="vibration" onClick={() => handleMenuItemClick("m/s2")}>m/s2</MenuItem>
+//                             ];
+//                           case 'intermidiateLux':
+//                             return [
+//                               <MenuItem key="lux" onClick={() => handleMenuItemClick("LUX")}>LUX</MenuItem>
+//                             ];
+//                           case 'intermidiateNoise':
+//                             return [
+//                               <MenuItem key="noise" onClick={() => handleMenuItemClick("dB")}>dB</MenuItem>
+//                             ];
+//                           case 'intermidiateFlow':
+//                             return [
+//                               <MenuItem key="flow" onClick={() => handleMenuItemClick("m3/h")}>m3/h</MenuItem>
+//                             ];
+//                           case 'intermidiateHeat':
+//                             return [
+//                               <MenuItem key="heat" onClick={() => handleMenuItemClick("mJ/h")}>mJ/h</MenuItem>
+//                             ];
+//                           case 'intermidiateCurrent':
+//                             return [
+//                               <MenuItem key="current" onClick={() => handleMenuItemClick("A")}>A</MenuItem>
+//                             ];
+//                           case 'intermidiateParticle':
+//                             return [
+//                               <MenuItem key="particle" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
+//                             ];
+//                           case 'intermidiateNO2':
+//                             return [
+//                               <MenuItem key="particle" onClick={() => handleMenuItemClick("ppm")}>ppm</MenuItem>
+//                             ];
+//                           default:
+//                             return null;
+//                         }
+//                       })()}
+//                     </Menu>
+//                   </FormControl>
+//                 </sup>
+//               </Box>
+//               <Typography sx={{ fontWeight: 'bold',fontSize : 14 }}>
+//                 {/* {Data?.timestamp?.length
+//                   ? Data.timestamp[Data.timestamp.length - 1]
+//                   : ""} */}
 
-                const [month, day, year] = datePart.split("/");
 
-                return `${day}/${month}/20${year}, ${timePart}`;
-              })()
-            : ""}
+//           {Data?.timestamp?.length
+//             ? (() => {
+//                 const [datePart, timePart] =
+//                   Data.timestamp[Data.timestamp.length - 1].split(", ");
+
+//                 const [month, day, year] = datePart.split("/");
+
+//                 return `${day}/${month}/20${year}, ${timePart}`;
+//               })()
+//             : ""}
             
-              </Typography>
-            </Box>
+//               </Typography>
+//             </Box>
 
             
-            : (
-              <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: tempCheck?.colors, position: 'relative', bottom: 5 }}>
-                <Typography sx={{ textAlign: 'center' }} width={80} height={60} fontSize={30} fontWeight={'bold'}>OFF</Typography>
-                {/* textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 */}
-              </Box>
-            )}
-        </Box>
-
-
-        <Box sx={{ position: 'relative', left: Data?.gadget_type === 'intermidiateValve' ? 60 : 0 }}>
-          {(Data?.gadget_type === 'intermidiateEnergy' && Data?.range !== 'live') ? (
-            <Bar data={dataBar} options={optionsBar} width={300} height={185} />
-          ) : (
-            <Line data={data} options={options} width={375} height={185} />
-          )}
-        </Box>
-      </Box>
-    </Card >
-
-
-  // 1st Card
-  // <Card className="iaq-card">
-  
-  //   {/* Header */}
-  //   <div className="iaq-header">
-  
-  //     <div>
-  //       <h3>IAQ - Location</h3>
-  //       <p>Sensor sensorNo</p>
-  //     </div>
-  
-  //     <div className="iaq-badge">
-  //       AQI Good · aqi
-  //     </div>
-  
-  //   </div>
-  
-  //   <hr />
-  
-  //   {/* Particulates */}
-  //   <div className="iaq-section">
-  
-  //     <h4>PARTICULATES & GASES</h4>
-  
-  //     <div className="iaq-grid">
-  
-  //       {gases.map(item => (
-  //         <div className="iaq-metric-card">
-  
-  //           <span>{item.label}</span>
-  
-  //           <div>
-  //             <strong>{item.value}</strong>
-  //             <small>{item.unit}</small>
-  //           </div>
-  
-  //           <span className="status-dot"></span>
-  
-  //         </div>
-  //       ))}
-  
-  //     </div>
-  
-  //   </div>
-  
-  //   {/* Environment */}
-  //   <div className="iaq-section">
-  
-  //     <h4>ENVIRONMENT</h4>
-  
-  //     <div className="iaq-grid env-grid">
-  
-  //       {environment.map(item => (
-  //         <div className="iaq-metric-card">
-  
-  //           <span>{item.label}</span>
-  
-  //           <div>
-  //             <strong>{item.value}</strong>
-  //             <small>{item.unit}</small>
-  //           </div>
-  
-  //           <span className="status-dot"></span>
-  
-  //         </div>
-  //       ))}
-  
-  //     </div>
-  
-  //   </div>
-  
-  // </Card>
-
-  // 2nd Card
-//   <div className="em-card">
-
-//   {/* Header */}
-//   <div className="em-header">
-//     <div>
-//       <h3>{Data?.meter_name}</h3>
-//       <p>
-//         Meter 4 of 15 · 114 BACnet points · last update 11:42
-//       </p>
-//     </div>
+//             : (
+//               <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', color: tempCheck?.colors, position: 'relative', bottom: 5 }}>
+//                 <Typography sx={{ textAlign: 'center' }} width={80} height={60} fontSize={30} fontWeight={'bold'}>OFF</Typography>
+//                 {/* textAlign: 'center', fontSize: 20, fontWeight: 'bold', marginTop: 2 */}
+//               </Box>
+//             )}
+//         </Box>
 
-//     <div className="em-status">
-//       <span className="status-dot"></span>
-//       Online
-//     </div>
-//   </div>
 
-//   <div className="em-divider"></div>
+//         <Box sx={{ position: 'relative', left: Data?.gadget_type === 'intermidiateValve' ? 60 : 0 }}>
+//           {(Data?.gadget_type === 'intermidiateEnergy' && Data?.range !== 'live') ? (
+//             <Bar data={dataBar} options={optionsBar} width={300} height={185} />
+//           ) : (
+//             <Line data={data} options={options} width={375} height={185} />
+//           )}
+//         </Box>
+//       </Box>
+//     </Card >
 
-//   {/* Summary */}
-//   <div className="em-summary">
+    <Card className="iaq-card" sx={{width: 600 , bgcolor: '#E8F5E9'}} >
 
-//     <div className="em-metric">
-//       <span>Active power</span>
-//       <h2>38.4 <small>kW</small></h2>
-//     </div>
+  {/* Header */}
+  <div className="iaq-header">
 
-//     <div className="em-metric">
-//       <span>Apparent</span>
-//       <h2>42.1 <small>kVA</small></h2>
-//     </div>
+    <div>
+      <h3>IAQ - Location</h3>
+      <p>Sensor sensorNo</p>
+    </div>
 
-//     <div className="em-metric">
-//       <span>Power factor</span>
-//       <h2>0.91</h2>
-//     </div>
+    <div className="iaq-badge">
+      AQI Good · aqi
+    </div>
 
-//     <div className="em-metric">
-//       <span>Frequency</span>
-//       <h2>49.98 <small>Hz</small></h2>
-//     </div>
+  </div>
 
-//   </div>
+  <hr />
 
-//   <div className="em-divider"></div>
+  {/* Particulates */}
+  <div className="iaq-section">
 
-//   {/* Details */}
-//   <div className="em-details">
+    <h4>PARTICULATES & GASES</h4>
 
-//     <div className="em-section">
+    <div className="iaq-grid">
 
-//       <h4>VOLTAGE</h4>
+      {/* {parameters.map(item => 
+      
+      (
+        <div className="iaq-metric-card" >
 
-//       <div className="em-row">
-//         <span>VR · VY · VB</span>
-//         <strong>238 · 240 · 239 V</strong>
-//       </div>
+          <span>{item.label}</span>
 
-//       <div className="em-row">
-//         <span>VRY</span>
-//         <strong>414 V</strong>
-//       </div>
+          <div>
+            <strong>{item.value}</strong>
+            <small>{item.unit}</small>
+          </div>
 
-//       <div className="em-row">
-//         <span>VYB</span>
-//         <strong>416 V</strong>
-//       </div>
+          <span className="status-dot"></span>
 
-//       <div className="em-row">
-//         <span>VBR</span>
-//         <strong>413 V</strong>
-//       </div>
+        </div>
+      ))
 
-//       <div className="em-row">
-//         <span>Imbalance</span>
-//         <strong>0.6%</strong>
-//       </div>
+      } */}
 
-//     </div>
+      {parameters.map((item) => {
 
-//     <div className="em-section">
+        const colors = IAQ_COLORS[item.label]
 
-//       <h4>CURRENT</h4>
+        return (
+          <div
+            className="iaq-metric-card"
+            style={{ backgroundColor: colors.bg }}
+          >
+            <span style={{ color: colors.color }}>{item.label}</span>
 
-//       <div className="em-row">
-//         <span>IR · IY · IB</span>
-//         <strong>58 · 60 · 59 A</strong>
-//       </div>
+            <div>
+              <strong style={{ color: colors.color }}>{item.value}</strong>
+              <small>{item.unit}</small>
+            </div>
 
-//       <div className="em-row">
-//         <span>Total current</span>
-//         <strong>177 A</strong>
-//       </div>
+            <span className="status-dot" style={{ background: colors.color }} />
+          </div>
+        );
 
-//       <div className="em-row">
-//         <span>Imbalance</span>
-//         <strong>1.7%</strong>
-//       </div>
 
-//     </div>
+      })}
 
-//   </div>
+    </div>
 
-//   <div className="em-divider"></div>
+  </div>
 
-//   {/* Footer */}
-//   <div className="em-footer">
+  {/* Environment */}
+  <div className="iaq-section">
 
-//     <div>
-//       <span>kWh Today</span>
-//       <h3>412.6</h3>
-//     </div>
+    <h4>ENVIRONMENT</h4>
 
-//     <div>
-//       <span>Cumulative kWh</span>
-//       <h3>184,712</h3>
-//     </div>
+    <div className="iaq-grid env-grid">
 
-//     <div>
-//       <span>Load Hours</span>
-//       <h3>3,184</h3>
-//     </div>
+      {/* {environment.map(item => (
+        <div className="iaq-metric-card">
 
-//   </div>
+          <span>{item.label}</span>
 
-// </div>
+          <div>
+            <strong>{item.value}</strong>
+            <small>{item.unit}</small>
+          </div>
 
-  // 3rd Card
-//   <div className="ahu-card">
+          <span className="status-dot"></span>
 
-//   <div className="ahu-header">
+        </div>
+      ))} */}
 
-//     <div>
-//       <h3>{ahuData.name}</h3>
-//       <p>{ahuData.device}</p>
-//     </div>
 
-//     <div className="ahu-header-right">
+      {
+        environment.map(item => {
+          const colors = IAQ_COLORS[item.label]
 
-//       <div className="ahu-running">
-//         ● {ahuData.status}
-//       </div>
+          return (
 
-//       <div className="ahu-mode">
-//         {ahuData.mode}
-//       </div>
+            <div className="iaq-metric-card" style={{ backgroundColor: colors.bg }}>
 
-//       <div className="ahu-time">
-//         {ahuData.time}
-//       </div>
+          <span>{item.label}</span>
 
-//     </div>
+          <div>
+            <strong>{item.value}</strong>
+            <small>{item.unit}</small>
+          </div>
 
-//   </div>
+          <span className="status-dot"></span>
 
-//   <div className="ahu-divider"></div>
+        </div>
+          )
 
-//   {/* Top Metrics */}
-//   <div className="ahu-metrics">
+        })
+      }
 
-//     {ahuData.metrics.map((item,index)=>(
-//       <div className="ahu-metric" key={index}>
 
-//         <span>{item.label}</span>
 
-//         <h2>
-//           {item.value}
-//           <small>{item.unit}</small>
-//         </h2>
+    </div>
 
-//         {item.subText && (
-//           <p>{item.subText}</p>
-//         )}
+  </div>
 
-//       </div>
-//     ))}
+</Card>
 
-//   </div>
-
-//   <div className="ahu-divider"></div>
-
-//   {/* Details */}
-//   <div className="ahu-details">
-
-//     <div className="ahu-section">
-
-//       <h4>AIR-SIDE</h4>
-
-//       {ahuData.airSide.map((item,index)=>(
-//         <div className="ahu-row" key={index}>
-//           <span>{item.label}</span>
-//           <strong>{item.value}</strong>
-//         </div>
-//       ))}
-
-//     </div>
-
-//     <div className="ahu-section">
-
-//       <h4>WATER-SIDE (COOLING)</h4>
-
-//       {ahuData.waterSide.map((item,index)=>(
-//         <div className="ahu-row" key={index}>
-//           <span>{item.label}</span>
-//           <strong>{item.value}</strong>
-//         </div>
-//       ))}
-
-//     </div>
-
-//   </div>
-
-//   <div className="ahu-divider"></div>
-
-//   {/* Safety */}
-//   <div className="ahu-safety">
-
-//     <h4>SAFETY & CONDITION</h4>
-
-//     <div className="ahu-safety-grid">
-
-//       {ahuData.safety.map((item,index)=>(
-//         <div className="ahu-safety-item" key={index}>
-//           <span className="safe-dot"></span>
-//           {item}
-//         </div>
-//       ))}
-
-//     </div>
-
-//   </div>
-
-// </div>
   );
 };
 
-export default MediumCard;
+export default LargeCardParameters;
 
 

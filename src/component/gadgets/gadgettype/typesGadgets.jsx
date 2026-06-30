@@ -5,6 +5,7 @@ const Gadgetstypes = ({ handleGadgettype }) => {
   const [typeGraph, setGraphtypes] = useState('energy');
 
   const handleButtonClick = (type) => {
+    console.log('typesofgadget',type)
     handleGadgettype(type);
 
     switch (type) {
@@ -65,6 +66,15 @@ const Gadgetstypes = ({ handleGadgettype }) => {
 
       case "discomfort":
         return setGraphtypes(type);
+
+      case "telemetry":
+        return setGraphtypes(type);
+      
+      case "obEnergyMeter":
+      return setGraphtypes(type);
+
+      case "ahu":
+      return setGraphtypes(type);
 
       default:
         return setGraphtypes(type);
@@ -487,6 +497,66 @@ const Gadgetstypes = ({ handleGadgettype }) => {
         onClick={() => handleButtonClick("gas")}
       >
         Gas Detector
+      </Button>
+
+      <Button
+        variant="contained"
+        color="inherit"
+        sx={{
+          fontWeight: "550",
+          border: styles.thinBorder,
+          borderRadius: 25,
+          padding: "10px 20px",
+          "&:hover": {
+            opacity: 1,
+            backgroundColor: "transparent",
+          },
+          borderWidth: 2,
+          borderColor: typeGraph === "telemetry" ? "#565759" : "",
+        }}
+        onClick={() => handleButtonClick("telemetry")}
+      >
+         Telemetry
+      </Button>
+
+      <Button
+        variant="contained"
+        color="inherit"
+        sx={{
+          fontWeight: "550",
+          border: styles.thinBorder,
+          borderRadius: 25,
+          padding: "10px 20px",
+          "&:hover": {
+            opacity: 1,
+            backgroundColor: "transparent",
+          },
+          borderWidth: 2,
+          borderColor: typeGraph === "obEnergyMeter" ? "#565759" : "",
+        }}
+        onClick={() => handleButtonClick("obEnergyMeter")}
+      >
+         OB Energy Meter
+      </Button>
+
+      <Button
+        variant="contained"
+        color="inherit"
+        sx={{
+          fontWeight: "550",
+          border: styles.thinBorder,
+          borderRadius: 25,
+          padding: "10px 20px",
+          "&:hover": {
+            opacity: 1,
+            backgroundColor: "transparent",
+          },
+          borderWidth: 2,
+          borderColor: typeGraph === "ahu" ? "#565759" : "",
+        }}
+        onClick={() => handleButtonClick("ahu")}
+      >
+         AHU
       </Button>
     </Box>
   );

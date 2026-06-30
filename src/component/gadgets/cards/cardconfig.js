@@ -167,6 +167,30 @@ const cards = [
     image: "smallGas.png",
     type: "gas",
   },
+  {
+    id: "9",
+    title: "Telemetry Trendline",
+    description:
+      "This gadget provides you with an idea of controlling the specific device discomfort parameters.",
+    image: "smallGas.png",
+    type: "telemetry",
+  },
+  {
+    id: "10",
+    title: "OB Energy Meter",
+    description:
+      "This gadget provides you with an idea of controlling the specific device discomfort parameters.",
+    image: "smallGas.png",
+    type: "obEnergyMeter",
+  },
+  {
+    id: "10",
+    title: "AHU",
+    description:
+      "This gadget provides you with an idea of controlling the specific device discomfort parameters.",
+    image: "smallGas.png",
+    type: "ahu",
+  }
 ];
 
 export default cards;

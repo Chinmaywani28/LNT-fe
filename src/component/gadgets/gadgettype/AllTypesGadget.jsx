@@ -84,6 +84,8 @@ const AllTypeGadget = ({ open, handleClose, typeGraph, allMeters, componentType 
     }
   }
 
+  console.log('fsdddffddddddd',filterMeters)
+
   const handleAddToDashboard = async () => {
     try {
       const completeGadget = {
@@ -318,6 +320,18 @@ const AllTypeGadget = ({ open, handleClose, typeGraph, allMeters, componentType 
 
       case "intermidiateGas":
         newChart = chartsObj.find((chart) => chart.chartId === 'intermidiateGas')?.render({ Data: gasM });
+        break;
+
+      case "intermidiatetelemetry":
+        newChart = chartsObj.find((chart) => chart.chartId === 'intermidiatetelemetry')?.render({ Data: gasM });
+        break;
+
+      case "obEnergyMeter":
+        newChart = chartsObj.find((chart) => chart.chartId === 'obEnergyMeter')?.render({ Data: gasM });
+        break;
+
+      case "ahu":
+        newChart = chartsObj.find((chart) => chart.chartId === 'ahu')?.render({ Data: gasM });
         break;
 
       default:

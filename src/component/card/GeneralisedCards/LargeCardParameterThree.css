@@ -1,0 +1,185 @@
+.ahu-card{
+  width:100%;
+  background:#fff;
+  border:1px solid #E5E7EB;
+  border-radius:18px;
+  padding:20px;
+}
+
+.ahu-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.ahu-header h3{
+  margin:0;
+  font-size:26px;
+  font-weight:700;
+}
+
+.ahu-header p{
+  margin-top:4px;
+  color:#667085;
+  font-size:14px;
+}
+
+.ahu-header-right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.ahu-running{
+  background:#EEF7DD;
+  color:#5D8F1A;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:600;
+}
+
+.ahu-mode{
+  background:#F4F4F5;
+  padding:8px 14px;
+  border-radius:10px;
+}
+
+.ahu-time{
+  color:#667085;
+  font-weight:500;
+}
+
+.ahu-divider{
+  height:1px;
+  background:#E5E7EB;
+  margin:18px 0;
+}
+
+.ahu-metrics{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.ahu-metric span{
+  color:#667085;
+  font-size:14px;
+}
+
+.ahu-metric h2{
+  margin-top:6px;
+  font-size:40px;
+  font-weight:700;
+}
+
+.ahu-metric small{
+  font-size:18px;
+}
+
+.ahu-metric p{
+  margin-top:6px;
+  color:#667085;
+  font-size:13px;
+}
+
+.ahu-details{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.ahu-section h4{
+  color:#667085;
+  margin-bottom:16px;
+  font-size:14px;
+}
+
+.ahu-row{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+
+.ahu-row span{
+  color:#344054;
+}
+
+.ahu-row strong{
+  font-weight:700;
+}
+
+.ahu-safety h4{
+  margin-bottom:16px;
+  color:#667085;
+}
+
+.ahu-safety-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:16px;
+}
+
+.ahu-safety-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.safe-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#B9D88B;
+}
+
+/* Mobile */
+@media (max-width:600px){
+
+  .ahu-header{
+    flex-direction:column;
+  }
+
+  .ahu-header-right{
+    width:100%;
+    flex-wrap:wrap;
+  }
+
+  .ahu-metrics{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ahu-details{
+    grid-template-columns:1fr;
+  }
+
+  .ahu-safety-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .ahu-metric h2{
+    font-size:28px;
+  }
+}
+
+/* Tablet */
+@media (min-width:601px) and (max-width:900px){
+
+  .ahu-metrics{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .ahu-safety-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+/* Laptop */
+@media (min-width:901px) and (max-width:1200px){
+
+}
+
+/* Desktop */
+@media (min-width:1201px){
+
+}

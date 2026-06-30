@@ -38,6 +38,7 @@ const GadgetDashboard = () => {
   };
 
   const handleGadgettype = (type) => {
+    console.log("Selected Gadget Type:", type);
     setGraphtypes(type);
   };
 

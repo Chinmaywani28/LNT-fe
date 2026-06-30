@@ -1,0 +1,163 @@
+.em-card{
+  background:#fff;
+  border:1px solid #E5E7EB;
+  border-radius:18px;
+  padding:20px;
+  width:100%;
+}
+
+.em-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+}
+
+.em-header h3{
+  margin:0;
+  font-size:24px;
+  font-weight:700;
+}
+
+.em-header p{
+  margin-top:4px;
+  color:#667085;
+  font-size:14px;
+}
+
+.em-status{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#EDF8E6;
+  color:#4F8A10;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:600;
+}
+
+.status-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#6CC04A;
+}
+
+.em-divider{
+  height:1px;
+  background:#E5E7EB;
+  margin:18px 0;
+}
+
+.em-summary{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.em-metric span{
+  display:block;
+  font-size:14px;
+  color:#667085;
+}
+
+.em-metric h2{
+  margin-top:6px;
+  font-size:38px;
+  font-weight:700;
+}
+
+.em-metric small{
+  font-size:18px;
+}
+
+.em-details{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.em-section h4{
+  margin-bottom:16px;
+  color:#667085;
+  font-size:14px;
+  letter-spacing:1px;
+}
+
+.em-row{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+
+.em-row span{
+  color:#344054;
+}
+
+.em-row strong{
+  font-weight:700;
+}
+
+.em-footer{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.em-footer span{
+  color:#667085;
+  font-size:14px;
+  text-transform:uppercase;
+}
+
+.em-footer h3{
+  margin-top:6px;
+  font-size:34px;
+  font-weight:700;
+}
+
+/* Mobile */
+@media (max-width:600px){
+
+  .em-header{
+    flex-direction:column;
+  }
+
+  .em-summary{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .em-details{
+    grid-template-columns:1fr;
+  }
+
+  .em-footer{
+    grid-template-columns:1fr;
+  }
+
+  .em-metric h2{
+    font-size:28px;
+  }
+}
+
+/* Tablet */
+@media (min-width:601px) and (max-width:900px){
+
+  .em-summary{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .em-footer{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+/* Laptop */
+@media (min-width:901px) and (max-width:1200px){
+
+}
+
+/* Desktop */
+@media (min-width:1201px){
+
+}

@@ -1,0 +1,60 @@
+.iaq-card{
+  background: red;
+  border:1px solid #e5e7eb;
+  border-radius:18px;
+  padding:20px;
+}
+
+.iaq-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+}
+
+.iaq-badge{
+  background:#e8f5df;
+  color:#3f7d20;
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.iaq-section{
+  margin-top:20px;
+}
+
+.iaq-section h4{
+  font-size:14px;
+  color:#667085;
+  margin-bottom:12px;
+}
+
+.iaq-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+
+.iaq-metric-card{
+  background:#f7f7f3;
+  border-radius:12px;
+  padding:14px;
+  position:relative;
+}
+
+.iaq-metric-card strong{
+  font-size:28px;
+  font-weight:700;
+}
+
+.status-dot{
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#b7d79c;
+}

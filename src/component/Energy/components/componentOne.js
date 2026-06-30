@@ -52,6 +52,9 @@ const ComponentOne = ({
         userId, componentMap, floorKey
       );
 
+      console.log(resp,'respresp');
+
+      
       const filteredgraphData = resp?.result;
 
       console.log(filteredgraphData,'graphs');
@@ -181,10 +184,12 @@ const ComponentOne = ({
     }
 
     try {
+      console.log('graphConfiggraphConfig',graphConfig)
       const results = await Promise.allSettled(
         graphConfig.map(async (item) => {
           try {
             const meterConfig = renderChart(item);
+            console.log('meterConfigmeterConfig',meterConfig)
             let obj = {
               meterConfig,
               chart_type: item.chart_type,
@@ -228,6 +233,24 @@ const ComponentOne = ({
                 obj.meterConfig = { gadget: "Power", meter_name: componentMap };
                 break;
               case "combineEnergy":
+                data = await fetchCombineDataEnergy(item.time_period);
+                obj.meterConfig = { gadget: "Energy", meter_name: componentMap };
+                break;
+
+              case "telemetry":
+                // console.log('iaqiaqiaqiaq')
+                data = await fetchCombineDataEnergy(item.time_period);
+                obj.meterConfig = { gadget: "Energy", meter_name: componentMap };
+                break;
+
+              case "obEnergyMeter":
+                // console.log('iaqiaqiaqiaq')
+                data = await fetchCombineDataEnergy(item.time_period);
+                obj.meterConfig = { gadget: "Energy", meter_name: componentMap };
+                break;
+
+              case "ahu":
+                // console.log('iaqiaqiaqiaq')
                 data = await fetchCombineDataEnergy(item.time_period);
                 obj.meterConfig = { gadget: "Energy", meter_name: componentMap };
                 break;
@@ -447,6 +470,15 @@ const ComponentOne = ({
         };
         
          case "gas":
+        return {
+          dbTable: meter.name_of_table,
+          gas: meter.gas_detector,
+          parameter: meter.gas_detector,
+          range: meter.time_period,
+          gadget: meter.gadget_type,
+        };
+
+        case "iaq":
         return {
           dbTable: meter.name_of_table,
           gas: meter.gas_detector,
