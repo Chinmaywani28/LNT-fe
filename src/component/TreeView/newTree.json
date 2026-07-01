@@ -847,15 +847,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -900,15 +892,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -953,15 +937,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1006,15 +982,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1059,15 +1027,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1112,15 +1072,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
@@ -1165,15 +1117,7 @@
                         ]
                     },
                     {
-                        "Floor_Number": "Pantry 1",
-                        "Location": [
-                            {
-                                "Name": "Temperature & Humidity Sensor"
-                            }
-                        ]
-                    },
-                    {
-                        "Floor_Number": "Pantry 2",
+                        "Floor_Number": "Pantry",
                         "Location": [
                             {
                                 "Name": "Temperature & Humidity Sensor"
